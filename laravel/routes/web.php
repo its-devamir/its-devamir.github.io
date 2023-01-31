@@ -12,7 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('');
+Route::prefix('/')->namespace('App\Http\Controllers')->group(function () {
+    Route::get('/' , 'MainController@home')->name('home');
+    Route::get('/product/{slug}', 'ProductController@show')->name('product');
+    Route::get('/products', 'ProductController@index')->name('products');
+    Route::get('/blog/{slug}', 'BlogController@show')->name('blog');
+    Route::get('/blogs', 'BlogController@index')->name('blogs');
 });
+

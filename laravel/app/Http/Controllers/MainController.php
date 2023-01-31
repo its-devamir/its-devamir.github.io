@@ -1,13 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Product;
+use App\Models\User;
+use App\Models\Blog;
+use App\Models\Cart;
+use App\Models\Categories;
 
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Http\Request;
 
-class Controller extends BaseController
+class MainController extends Controller
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    public function home(){
+        $products = Product::all();
+        return view('main',["products"=>$products]);
+    }
 }
