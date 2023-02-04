@@ -32,5 +32,6 @@ class Product extends Authenticatable
     ];
     protected $casts = [
         'images' => 'array',
+        'sizes' => 'array'
     ];
 }

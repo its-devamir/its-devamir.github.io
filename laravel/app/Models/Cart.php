@@ -10,19 +10,11 @@ use Laravel\Sanctum\HasApiTokens;
 
 class Cart extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
+    protected $table = 'cart';
     protected $fillable = [
         'pro_id',
         'user_id',
         'size',
-    ];
-    protected $casts = [
-        'images' => 'array',
+        'number'
     ];
 }

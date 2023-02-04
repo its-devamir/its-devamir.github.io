@@ -1,6 +1,7 @@
 (function(window, document, $, undefined) {
     'use strict';
-
+    
+    var newrt;
     var axilInit = {
         i: function(e) {
             axilInit.s();
@@ -203,35 +204,40 @@
             $('#slider-range').slider({
                 range: true,
                 min: 0,
-                max: 5000,
-                values: [0, 3000],
+                max: 2000000,
+                values: [0, 2000000],
                 slide: function(event, ui) {
-                    $('#amount').val('$' + ui.values[0] + '  $' + ui.values[1]);
+                    $('#amount').val('' + ui.values[0].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                      + ' ' +ui.values[1].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+ 'تومن   ');
+                    $("#maxPrice").val(ui.values[1]);
+                    $("#minPrice").val(ui.values[0]);
                 }
             });
-            $('#amount').val('$' + $('#slider-range').slider('values', 0) +
-                '  $' + $('#slider-range').slider('values', 1));
-
+            $('#amount').val('' + $('#slider-range').slider('values', 0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
+             '  '+ $('#slider-range').slider('values', 1).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + 'تومن   ');
+            $("#maxPrice").val($('#slider-range').slider('values', 1));
+            $("#minPrice").val($('#slider-range').slider('values', 0));
+            // $("#amount").val($("#amount").val().toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         },
-
         quantityRanger: function() {
-            $('.pro-qty').prepend('<span class="dec qtybtn">-</span>');
-            $('.pro-qty').append('<span class="inc qtybtn">+</span>');
-            $('.qtybtn').on('click', function() {
-                var $button = $(this);
-                var oldValue = $button.parent().find('input').val();
-                if ($button.hasClass('inc')) {
-                    var newVal = parseFloat(oldValue) + 1;
-                } else {
-                    // Don't allow decrementing below zero
-                    if (oldValue > 0) {
-                        var newVal = parseFloat(oldValue) - 1;
-                    } else {
-                        newVal = 0;
-                    }
-                }
-                $button.parent().find('input').val(newVal);
-            });
+            // $('.pro-qty').prepend('<span class="dec qtybtn">-</span>');
+            // $('.pro-qty').append('<span class="inc qtybtn">+</span>');
+            // $('.qtybtn').on('click', function() {
+            //     var $button = $(this);
+            //     var oldValue = $button.parent().find('input').val();
+            //     if ($button.hasClass('inc')) {
+            //         var newVal = parseFloat(oldValue) + 1;
+            //     } else {
+            //         // Don't allow decrementing below zero
+            //         if (oldValue > 0) {
+            //             var newVal = parseFloat(oldValue) - 1;
+            //         } else {
+            //             newVal = 0;
+            //         }
+            //     }
+            //     newrt = newVal;
+            //     $button.parent().find('input').val(newVal);
+            // });
         },
 
         axilSlickActivation: function(e) {
@@ -568,6 +574,33 @@
 
             });
 
+            $('.product-small-thumb').slick({
+                infinite: false,
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: false,
+                focusOnSelect: true,
+                vertical: true,
+                speed: 800,
+                asNavFor: '.product-large-thumbnail',
+                responsive: [{
+                        breakpoint: 992,
+                        settings: {
+                            vertical: false,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            vertical: false,
+                            slidesToShow: 4,
+                        }
+                    }
+                ]
+
+            });
+
             $('.product-large-thumbnail').slick({
                 infinite: false,
                 slidesToShow: 1,
@@ -576,34 +609,7 @@
                 dots: false,
                 speed: 800,
                 draggable: false,
-                rtl: true,
                 asNavFor: '.product-small-thumb'
-            });
-
-            $('.product-small-thumb-2').slick({
-                infinite: true,
-                slidesToShow: 6,
-                slidesToScroll: 1,
-                arrows: false,
-                dots: false,
-                focusOnSelect: true,
-                speed: 800,
-                rtl: true,
-                asNavFor: '.product-large-thumbnail-2',
-                responsive: [{
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 5,
-                        }
-                    },
-                    {
-                        breakpoint: 479,
-                        settings: {
-                            slidesToShow: 4,
-                        }
-                    }
-                ]
-
             });
 
             $('.product-large-thumbnail-2').slick({
@@ -651,7 +657,6 @@
                 speed: 800,
                 draggable: false,
                 swipe: false,
-                rtl: true,
                 asNavFor: '.product-small-thumb-3'
             });
 
