@@ -7,7 +7,7 @@
     <div class="axil-breadcrumb-area">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 col-md-8">
+                <div class="col-lg-7 col-md-8">
                     <div class="inner">
                         <ul class="axil-breadcrumb">
                             <li class="axil-breadcrumb-item"><a href="{{ route('home') }}">خانه</a></li>
@@ -17,7 +17,7 @@
                         <h1 class="title text-bold">محصولی که میخوای رو پیدا کن</h1>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-4">
+                <div class="col-lg-5 col-md-4">
                     <div class="inner">
                         <div class="bradcrumb-thumb">
                             <img src="assets/images/product/product-45.png" alt="Image">

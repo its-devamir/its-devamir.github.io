@@ -1,20 +1,29 @@
 @font-face {
     font-family: iransans;
-    src: url(../fonts/IRANSansRegular/IRANSans-Regular.ttf);
+    src: url(../fonts/iransans/IRANSansX-Regular.woff);
+    src: url(../fonts/iransans/num/IRANSansXFaNum-Regular.woff);
 }
 @font-face {
     font-family: iransans-medium;
-    src: url(../fonts/IRANSansMedium/IRANSans\ Medium.ttf);
+    src: url(../fonts/iransans/IRANSansX-Medium.woff);
+    src: url(../fonts/iransans/num/IRANSansXFaNum-Medium.woff);
 }
 @font-face {
     font-family: iransans-bold;
-    src: url(../fonts/IRANSansUltraLight/IRANSans\ UltraLight.ttf);
+    src: url(../fonts/iransans/IRANSansX-Bold.woff);
+    src: url(../fonts/iransans/num/IRANSansXFaNum-Bold.woff);
 }
 body{
-    font-family: estedad;
+    font-family: iransans;
+}
+.price{
+  font-family: iransans-medium !important;
 }
 .text-bold{
-    font-family: estedad-bold;
+    font-family: iransans-bold;
+}
+.text-medium{
+    font-family: iransans-medium;
 }
 .r-1-1{
     aspect-ratio: 1/1;
