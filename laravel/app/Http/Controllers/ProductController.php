@@ -51,7 +51,7 @@ class ProductController extends Controller
                     ->orwhere('wishlist', 'like', '%' . ',' . $p->id . ']' . '%')
                     ->orwhere('wishlist', 'like', '%' . '[' . $p->id . ',' . '%')
                     ->orwhere('wishlist', 'like', '%' . '[' . $p->id . ']' . '%')->get();
-            }else{
+            } else {
                 $userWishList = [];
             }
             $p->wish = count($userWishList) > 0 ? true : false;
@@ -72,15 +72,15 @@ class ProductController extends Controller
             $newPrice = $product->price;
         }
         $product->newPrice = $newPrice;
-            if (auth()->user() != null) {
-                $productWish = User::where('id', auth()->user()->id)->where('wishlist', 'like', '%' . ',' . $product->id . ',' . '%')
-                    ->orwhere('wishlist', 'like', '%' . ',' . $product->id . ']' . '%')
-                    ->orwhere('wishlist', 'like', '%' . '[' . $product->id . ',' . '%')
-                    ->orwhere('wishlist', 'like', '%' . '[' . $product->id . ']' . '%')->get();
-            }else{
-                $productWish = [];
-            }
-            $product->wish = count($productWish) > 0 ? true : false;
+        if (auth()->user() != null) {
+            $productWish = User::where('id', auth()->user()->id)->where('wishlist', 'like', '%' . ',' . $product->id . ',' . '%')
+                ->orwhere('wishlist', 'like', '%' . ',' . $product->id . ']' . '%')
+                ->orwhere('wishlist', 'like', '%' . '[' . $product->id . ',' . '%')
+                ->orwhere('wishlist', 'like', '%' . '[' . $product->id . ']' . '%')->get();
+        } else {
+            $productWish = [];
+        }
+        $product->wish = count($productWish) > 0 ? true : false;
         $suggest = Product::where("cat_id", $product->cat_id)->paginate(10);
         foreach ($suggest as $s) {
             if ($s->off != 0) {
@@ -95,7 +95,7 @@ class ProductController extends Controller
                     ->orwhere('wishlist', 'like', '%' . ',' . $s->id . ']' . '%')
                     ->orwhere('wishlist', 'like', '%' . '[' . $s->id . ',' . '%')
                     ->orwhere('wishlist', 'like', '%' . '[' . $s->id . ']' . '%')->get();
-            }else{
+            } else {
                 $userWishList = [];
             }
             $s->wish = count($userWishList) > 0 ? true : false;
@@ -122,7 +122,7 @@ class ProductController extends Controller
                 ->orwhere('wishlist', 'like', '%' . ',' . $product->id . ']' . '%')
                 ->orwhere('wishlist', 'like', '%' . '[' . $product->id . ',' . '%')
                 ->orwhere('wishlist', 'like', '%' . '[' . $product->id . ']' . '%')->get();
-        }else{
+        } else {
             $productWish = [];
         }
         $product->wish = count($productWish) > 0 ? true : false;
@@ -140,12 +140,19 @@ class ProductController extends Controller
     public function addCart(Product $product, Request $request)
     {
         if (auth()->user() != null) {
-            Cart::create([
-                "pro_id" => $product->id,
-                "user_id" => auth()->user()->id,
-                "size" => $request->size,
-                "number" => $request->number
-            ]);
+            $cart = Cart::where("user_id", auth()->user()->id)->where('pro_id', $product->id)->where('size' , $request->size)->first();
+            if ($cart == null) {
+                Cart::create([
+                    "pro_id" => $product->id,
+                    "user_id" => auth()->user()->id,
+                    "size" => $request->size,
+                    "number" => $request->number
+                ]);
+            }else{
+                $cart->update([
+                    "number" => $cart->number + $request->number
+                ]);
+            }
             return response()->json([
                 'status' => 'success'
             ]);
@@ -172,7 +179,7 @@ class ProductController extends Controller
                     "status" => "remove"
                 ]);
             } else {
-                array_push($wishList , $product->id);
+                array_push($wishList, $product->id);
                 auth()->user()->update([
                     "wishlist" => $wishList
                 ]);
@@ -180,14 +187,14 @@ class ProductController extends Controller
                     "status" => "add"
                 ]);
             }
-            
         } else
             return response()->json([
                 "status" => 'login'
             ]);
     }
-    public function getSizes(Request $request){
-        $sizes = Product::where('id' , $request->id)->first()->sizes;
+    public function getSizes(Request $request)
+    {
+        $sizes = Product::where('id', $request->id)->first()->sizes;
         return response()->json([
             "sizes" => $sizes,
         ]);

@@ -18,8 +18,10 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 Route::prefix('/')->namespace('App\Http\Controllers')->group(function () {
-    Route::get('/getProduct' , 'productController@getProduct');
-    Route::post('/addCart/{product}' , 'productController@addCart');
-    Route::get('/addWish/{product}' , 'productController@addWish');
-    Route::get('/getSizes' , 'productController@getSizes');
+    Route::get('/getProduct' , 'ProductController@getProduct');
+    Route::post('/addCart/{product}' , 'ProductController@addCart');
+    Route::get('/addWish/{product}' , 'ProductController@addWish');
+    Route::get('/getSizes' , 'ProductController@getSizes');
+    Route::post('/getCart' , 'MainController@getCart');
+    Route::post('/deleteCart' , 'MainController@deleteCart');
 });
