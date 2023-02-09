@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Categories;
 use App\Models\Cart;
+use App\Models\Comment;
 use App\Models\User;
 use Illuminate\Http\Request;
 use PDO;
@@ -16,93 +17,43 @@ class ProductController extends Controller
     public function index(Request $request)
     {
 
-        $cat = $request->cat;
-        $minPrice = $request->minPrice;
-        $maxPrice = $request->maxPrice;
-        $sort = $request->sort;
-
-        $products = Product::latest();
-        if (isset($cat)) {
-            if ($cat != 'all') $products->where('cat_id', intval($cat));
-        }
-        if (isset($minPrice) && isset($maxPrice)) {
-            $products->where('price', '>=', $minPrice)->where('price', '<=', $maxPrice);
-        }
-        if (isset($sort)) {
-            if ($sort == 'newest') $products->orderBy('id', 'desc');
-            if ($sort == 'cheep') $products->orderBy('price');
-            if ($sort == 'expensive') $products->orderBy('price', 'desc');
-            if ($sort == 'off') $products->orderBy('off', 'desc');
-        } else {
-            $products->orderBy('id', 'desc');
-        }
-        $products = $products->get();
+        $products = Product::Filter()->get();
         $categories = Categories::all();
-        foreach ($products as $p) {
-            if ($p->off != 0) {
-                $off = $p->off;
-                $newPrice = ($p->price) * (100 - $off) / 100;
-            } else {
-                $newPrice = $p->price;
-            }
-            $p->newPrice = $newPrice;
-            if (auth()->user() != null) {
-                $userWishList = User::where('id', auth()->user()->id)->where('wishlist', 'like', '%' . ',' . $p->id . ',' . '%')
-                    ->orwhere('wishlist', 'like', '%' . ',' . $p->id . ']' . '%')
-                    ->orwhere('wishlist', 'like', '%' . '[' . $p->id . ',' . '%')
-                    ->orwhere('wishlist', 'like', '%' . '[' . $p->id . ']' . '%')->get();
-            } else {
-                $userWishList = [];
-            }
-            $p->wish = count($userWishList) > 0 ? true : false;
-        }
+        // dd($products);
         $data = [
             'products' => $products,
             'categories' => $categories
         ];
         return view('products', $data);
     }
+    public function getProducts(Request $request){
+        $products = Product::Filter()->paginate(2);
+        // dd($product  s);
+        foreach ($products as $p) {
+            $p->newPrice = $p->newPrice();
+            $p->wish = count($p->getWishes()) > 0 ? true : false;
+        } 
+        return response()->json([
+            'products' => $products
+        ]);
+    }
     public function show($slug)
     {
         $product = Product::where('slug', $slug)->first();
-        if ($product->off != 0) {
-            $off = $product->off;
-            $newPrice = ($product->price) * (100 - $off) / 100;
-        } else {
-            $newPrice = $product->price;
-        }
-        $product->newPrice = $newPrice;
-        if (auth()->user() != null) {
-            $productWish = User::where('id', auth()->user()->id)->where('wishlist', 'like', '%' . ',' . $product->id . ',' . '%')
-                ->orwhere('wishlist', 'like', '%' . ',' . $product->id . ']' . '%')
-                ->orwhere('wishlist', 'like', '%' . '[' . $product->id . ',' . '%')
-                ->orwhere('wishlist', 'like', '%' . '[' . $product->id . ']' . '%')->get();
-        } else {
-            $productWish = [];
-        }
-        $product->wish = count($productWish) > 0 ? true : false;
-        $suggest = Product::where("cat_id", $product->cat_id)->paginate(10);
+        
+        $product->newPrice = $product->newPrice();
+        
+        $product->wish = count($product->getWishes()) > 0 ? true : false;
+        $suggest = Product::where("cat_id", $product->cat_id)->where('id' , '!=' , $product->id)->paginate(10);
         foreach ($suggest as $s) {
-            if ($s->off != 0) {
-                $s_off = $s->off;
-                $s_newPrice = ($s->price) * (100 - $s_off) / 100;
-            } else {
-                $s_newPrice = $s->price;
-            }
-            $s->newPrice = $s_newPrice;
-            if (auth()->user() != null) {
-                $userWishList = User::where('id', auth()->user()->id)->where('wishlist', 'like', '%' . ',' . $s->id . ',' . '%')
-                    ->orwhere('wishlist', 'like', '%' . ',' . $s->id . ']' . '%')
-                    ->orwhere('wishlist', 'like', '%' . '[' . $s->id . ',' . '%')
-                    ->orwhere('wishlist', 'like', '%' . '[' . $s->id . ']' . '%')->get();
-            } else {
-                $userWishList = [];
-            }
-            $s->wish = count($userWishList) > 0 ? true : false;
+            $s->newPrice = $s->newPrice();
+            $s->wish = count($s->getWishes()) > 0 ? true : false;
         }
+        $comments = Comment::where('pro_id' , $product->id)->where('type' , 'product')->get();
         $data = [
             'product' => $product,
-            "suggest" => $suggest
+            "suggest" => $suggest,
+            'comments' => $comments
         ];
         return view('product', $data);
     }
@@ -167,10 +118,14 @@ class ProductController extends Controller
         if (auth()->user() != null) {
             $wishList = auth()->user()->wishlist;
             if (in_array($product->id, auth()->user()->wishlist)) {
-                $wishList = array_diff($wishList, array($product->id));
-                $wishList2 = [];
-                foreach ($wishList as $w) {
-                    array_push($wishList2, $w);
+                $wishes = [];
+                foreach (auth()->user()->wishlist as $wish) {
+                    array_push($wishes, $wish);
+                }
+                $wishes = array_diff($wishes, array($product->id));
+                $wishList = [];
+                foreach ($wishes as $w) {
+                    array_push($wishList, $w);
                 }
                 auth()->user()->update([
                     "wishlist" => $wishList
@@ -198,5 +153,32 @@ class ProductController extends Controller
         return response()->json([
             "sizes" => $sizes,
         ]);
+    }
+    public function sendRate(Request $request){
+        if(auth()->user() != null){
+            
+            if($request->body != '' && strlen($request->body) < 250 && $request->rate != 0){
+            $comments =  Comment::create([
+                    'pro_id' => $request->pro_id,
+                    'user_id' => auth()->user()->id,
+                    'rate' => $request->rate,
+                    'body' => $request->body,
+                    'type' => $request->type
+            ]);
+            $comments->user = $comments->user->id;
+                return response()->json([
+                    'status' => 'success',
+                    'comment' => $comments
+                ]);
+            }else{
+                return response()->json([
+                    'status' => 'error'
+                ]);
+            }
+        }else{
+            return response()->json([
+                'status' => 'login'
+            ]);
+        }
     }
 }

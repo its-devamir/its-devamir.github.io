@@ -59,4 +59,10 @@ class MainController extends Controller
             ]);
         }
     }
+    public function getCategories(){
+        $cat = Categories::all();
+        return response()->json([
+            'categories' => $cat
+        ]);
+    }
 }

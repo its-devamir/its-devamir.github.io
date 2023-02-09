@@ -58,15 +58,15 @@
                                 </div>
                                 <div class="product-rating">
                                     <div class="star-rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
+                                        <i class="{{$product->rate() < 1? 'far' : 'fas'}} fa-star"></i>
+                                        <i class="{{$product->rate() < 2? 'far' : 'fas'}} fa-star"></i>
+                                        <i class="{{$product->rate() < 3? 'far' : 'fas'}} fa-star"></i>
+                                        <i class="{{$product->rate() < 4? 'far' : 'fas'}} fa-star"></i>
+                                        <i class="{{$product->rate() < 5? 'far' : 'fas'}} fa-star"></i>
                                     </div>
-                                    <div class="review-link">
-                                        <a href="#">(<span>2</span> customer reviews)</a>
-                                    </div>
+                                    {{-- <div class="review-link">
+                                        <a href="#reviews">(<span>2</span> customer reviews)</a>
+                                    </div> --}}
                                 </div>
                                 {{-- <ul class="product-meta">
                                     <li><i class="fal fa-check"></i>In stock</li>
@@ -114,10 +114,10 @@
 
                                     <!-- Start Product Action  -->
                                     <ul class="product-action d-flex-center mb--0">
-                                        <li class="add-to-cart"><a class="axil-btn btn-bg-primary" onclick="addCart(this , {{$product->id}})"> افزودن به سبد خرید</a>
+                                        <li class="add-to-cart"><a class="axil-btn btn-bg-primary cursor-pointer" onclick="addCart(this , {{$product->id}})"> افزودن به سبد خرید</a>
                                         </li>
-                                        <li class="wishlist"><a onclick="addWish(this , {{$product->id}})" class="axil-btn wishlist-btn"><i
-                                                    class="far fa-heart {{$product->wish == 1 ? 'text-danger' : ''}}" id="wish-i{{$product->id}}"></i></a></li>
+                                        <li class="wishlist"><a onclick="addWish(this , {{$product->id}})" class="axil-btn wishlist-btn {{$product->wish == 1 ? 'wishShow' : ''}}"><i
+                                                    class="far fa-heart"></i></a></li>
                                     </ul>
                                     <!-- End Product Action  -->
 
@@ -136,15 +136,15 @@
                 <ul class="nav tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <a class="active" id="description-tab" data-bs-toggle="tab" href="#description" role="tab"
-                            aria-controls="description" aria-selected="true">Description</a>
+                            aria-controls="description" aria-selected="true">توضیحات</a>
                     </li>
-                    <li class="nav-item " role="presentation">
+                    {{-- <li class="nav-item " role="presentation">
                         <a id="additional-info-tab" data-bs-toggle="tab" href="#additional-info" role="tab"
                             aria-controls="additional-info" aria-selected="false">Additional Information</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item" role="presentation">
                         <a id="reviews-tab" data-bs-toggle="tab" href="#reviews" role="tab" aria-controls="reviews"
-                            aria-selected="false">Reviews</a>
+                            aria-selected="false">نظرات</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
@@ -152,23 +152,20 @@
                         aria-labelledby="description-tab">
                         <div class="product-desc-wrapper">
                             <div class="row">
-                                <div class="col-lg-6 mb--30">
+                                <div class="col-12 mb--30">
                                     <div class="single-desc">
-                                        <h5 class="title">Specifications:</h5>
-                                        <p>We’ve created a full-stack structure for our working workflow processes, were
-                                            from the funny the century initial all the made, have spare to negatives. But
-                                            the structure was from the funny the century rather,
-                                            initial all the made, have spare to negatives.</p>
+                                        <h5 class="title">توضیحات محصول:</h5>
+                                        <p>{{$product->description}}</p>
                                     </div>
                                 </div>
                                 <!-- End .col-lg-6 -->
-                                <div class="col-lg-6 mb--30">
+                                {{-- <div class="col-lg-6 mb--30">
                                     <div class="single-desc">
                                         <h5 class="title">Care & Maintenance:</h5>
                                         <p>Use warm water to describe us as a product team that creates amazing UI/UX
                                             experiences, by crafting top-notch user experience.</p>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <!-- End .col-lg-6 -->
                             </div>
                             <!-- End .row -->
@@ -179,19 +176,19 @@
                                             <div class="icon">
                                                 <img src="assets/images/product/product-thumb/icon-3.png" alt="icon">
                                             </div>
-                                            Easy Returns
+                                            بازگشت سریع
                                         </li>
                                         <li class="single-features">
                                             <div class="icon">
                                                 <img src="assets/images/product/product-thumb/icon-2.png" alt="icon">
                                             </div>
-                                            Quality Service
+                                            کیفیت سوریس
                                         </li>
                                         <li class="single-features">
                                             <div class="icon">
                                                 <img src="assets/images/product/product-thumb/icon-1.png" alt="icon">
                                             </div>
-                                            Original Product
+                                            محصول اصل
                                         </li>
                                     </ul>
                                     <!-- End .pro-des-features -->
@@ -201,7 +198,7 @@
                         </div>
                         <!-- End .product-desc-wrapper -->
                     </div>
-                    <div class="tab-pane fade" id="additional-info" role="tabpanel"
+                    {{-- <div class="tab-pane fade" id="additional-info" role="tabpanel"
                         aria-labelledby="additional-info-tab">
                         <div class="product-additional-info">
                             <div class="table-responsive">
@@ -255,116 +252,48 @@
                                 </table>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                         <div class="reviews-wrapper">
                             <div class="row">
                                 <div class="col-lg-6 mb--40">
                                     <div class="axil-comment-area pro-desc-commnet-area">
-                                        <h5 class="title">01 Review for this product</h5>
+                                        <h5 class="title">نظرات این محصول: {{count($comments)}}</h5>
                                         <ul class="comment-list">
                                             <!-- Start Single Comment  -->
-                                            <li class="comment">
-                                                <div class="comment-body">
-                                                    <div class="single-comment">
-                                                        <div class="comment-img">
-                                                            <img src="./assets/images/blog/author-image-4.png"
-                                                                alt="Author Images">
-                                                        </div>
-                                                        <div class="comment-inner">
-                                                            <h6 class="commenter">
-                                                                <a class="hover-flip-item-wrapper" href="#">
-                                                                    <span class="hover-flip-item">
-                                                                        <span data-text="Cameron Williamson">Eleanor
-                                                                            Pena</span>
+                                            @foreach ($comments as $c)
+                                                
+                                                <li class="comment">
+                                                    <div class="comment-body">
+                                                        <div class="single-comment">
+                                                            <div class="comment-img">
+                                                                <img src="{{$c->user->image}}" class="w-70p r-1-1"
+                                                                    alt="Author Images">
+                                                            </div>
+                                                            <div class="comment-inner">
+                                                                <h6 class="commenter">
+                                                                    <a class="hover-flip-item-wrapper">
+                                                                        <span class="hover-flip-item">
+                                                                            <span data-text="Cameron Williamson">{{$c->user->name}}</span>
+                                                                        </span>
+                                                                    </a>
+                                                                    <span class="commenter-rating ratiing-four-star">
+                                                                        <a><i class="fas fa-star {{$c->rate < 1 ? 'empty-rating' : ''}}"></i></a>
+                                                                        <a><i class="fas fa-star {{$c->rate < 2 ? 'empty-rating' : ''}}"></i></a>
+                                                                        <a><i class="fas fa-star {{$c->rate < 3 ? 'empty-rating' : ''}}"></i></a>
+                                                                        <a><i class="fas fa-star {{$c->rate < 4 ? 'empty-rating' : ''}}"></i></a>
+                                                                        <a><i
+                                                                                class="fas fa-star {{$c->rate < 5 ? 'empty-rating' : ''}}"></i></a>
                                                                     </span>
-                                                                </a>
-                                                                <span class="commenter-rating ratiing-four-star">
-                                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                                    <a href="#"><i
-                                                                            class="fas fa-star empty-rating"></i></a>
-                                                                </span>
-                                                            </h6>
-                                                            <div class="comment-text">
-                                                                <p>“We’ve created a full-stack structure for our working
-                                                                    workflow processes, were from the funny the century
-                                                                    initial all the made, have spare to negatives. ” </p>
+                                                                </h6>
+                                                                <div class="comment-text">
+                                                                    <p>{{$c->body}}</p>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </li>
-                                            <!-- End Single Comment  -->
-
-                                            <!-- Start Single Comment  -->
-                                            <li class="comment">
-                                                <div class="comment-body">
-                                                    <div class="single-comment">
-                                                        <div class="comment-img">
-                                                            <img src="./assets/images/blog/author-image-4.png"
-                                                                alt="Author Images">
-                                                        </div>
-                                                        <div class="comment-inner">
-                                                            <h6 class="commenter">
-                                                                <a class="hover-flip-item-wrapper" href="#">
-                                                                    <span class="hover-flip-item">
-                                                                        <span data-text="Rahabi Khan">Courtney Henry</span>
-                                                                    </span>
-                                                                </a>
-                                                                <span class="commenter-rating ratiing-four-star">
-                                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                                </span>
-                                                            </h6>
-                                                            <div class="comment-text">
-                                                                <p>“We’ve created a full-stack structure for our working
-                                                                    workflow processes, were from the funny the century
-                                                                    initial all the made, have spare to negatives. ”</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <!-- End Single Comment  -->
-
-                                            <!-- Start Single Comment  -->
-                                            <li class="comment">
-                                                <div class="comment-body">
-                                                    <div class="single-comment">
-                                                        <div class="comment-img">
-                                                            <img src="./assets/images/blog/author-image-5.png"
-                                                                alt="Author Images">
-                                                        </div>
-                                                        <div class="comment-inner">
-                                                            <h6 class="commenter">
-                                                                <a class="hover-flip-item-wrapper" href="#">
-                                                                    <span class="hover-flip-item">
-                                                                        <span data-text="Rahabi Khan">Devon Lane</span>
-                                                                    </span>
-                                                                </a>
-                                                                <span class="commenter-rating ratiing-four-star">
-                                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                                    <a href="#"><i class="fas fa-star"></i></a>
-                                                                </span>
-                                                            </h6>
-                                                            <div class="comment-text">
-                                                                <p>“We’ve created a full-stack structure for our working
-                                                                    workflow processes, were from the funny the century
-                                                                    initial all the made, have spare to negatives. ” </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                                </li>
+                                            @endforeach
                                             <!-- End Single Comment  -->
                                         </ul>
                                     </div>
@@ -373,49 +302,53 @@
                                 <!-- End .col -->
                                 <div class="col-lg-6 mb--40">
                                     <!-- Start Comment Respond  -->
-                                    <div class="comment-respond pro-des-commend-respond mt--0">
-                                        <h5 class="title mb--30">Add a Review</h5>
-                                        <p>Your email address will not be published. Required fields are marked *</p>
-                                        <div class="rating-wrapper d-flex-center mb--40">
-                                            Your Rating <span class="require">*</span>
-                                            <div class="reating-inner ml--20">
-                                                <a href="#"><i class="fal fa-star"></i></a>
-                                                <a href="#"><i class="fal fa-star"></i></a>
-                                                <a href="#"><i class="fal fa-star"></i></a>
-                                                <a href="#"><i class="fal fa-star"></i></a>
-                                                <a href="#"><i class="fal fa-star"></i></a>
+                                    @if(auth()->user() !=null)
+                                        <div class="comment-respond pro-des-commend-respond mt--0">
+                                            <h5 class="title mb--30">افزودن نظر</h5>
+                                            {{-- <p>ایمیل شما نمایش نخواهد داد شد</p> --}}
+                                            <div class="rating-wrapper d-flex-center mb--40">
+                                                امتیاز شما <span class="require">*</span>
+                                                <div class="reating-inner ml--20">
+                                                   <input type="radio" id="rateNum5" name="rateNum" onclick="setrate(this)" value="5" class="d-none"> <label for="rateNum5" id="rateLabelNum5" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
+                                                   <input type="radio" id="rateNum4" name="rateNum" onclick="setrate(this)" value="4" class="d-none"> <label for="rateNum4" id="rateLabelNum4" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
+                                                   <input type="radio" id="rateNum3" name="rateNum" onclick="setrate(this)" value="3" class="d-none"> <label for="rateNum3" id="rateLabelNum3" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
+                                                   <input type="radio" id="rateNum2" name="rateNum" onclick="setrate(this)" value="2" class="d-none"> <label for="rateNum2" id="rateLabelNum2" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
+                                                   <input type="radio" id="rateNum1" name="rateNum" onclick="setrate(this)" value="1" class="d-none"> <label for="rateNum1" id="rateLabelNum1" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
+                                                </div>
                                             </div>
+                                            <input type="hidden" id="product_id" value="{{$product->id}}">
+                                            <form action="#">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label id="supportLength"></label>
+                                                            <textarea name="message" onkeyup="ableLength(this)" id="bodyRate" placeholder="نظر شما"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    {{-- <div class="col-lg-6 col-md-6 col-12">
+                                                        <div class="form-group">
+                                                            <label>Name <span class="require">*</span></label>
+                                                            <input id="nameRate" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-12">
+                                                        <div class="form-group">
+                                                            <label>Email <span class="require">*</span> </label>
+                                                            <input id="emailRate" type="email">
+                                                        </div>
+                                                    </div> --}}
+                                                    <div class="col-lg-12">
+                                                        <div class="form-submit">
+                                                            <button type="button" id="submitRate" onclick="addRate(this)"
+                                                                class="axil-btn btn-bg-primary w-auto">افزودن</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
                                         </div>
-
-                                        <form action="#">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="form-group">
-                                                        <label>Other Notes (optional)</label>
-                                                        <textarea name="message" placeholder="Your Comment"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-12">
-                                                    <div class="form-group">
-                                                        <label>Name <span class="require">*</span></label>
-                                                        <input id="name" type="text">
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-12">
-                                                    <div class="form-group">
-                                                        <label>Email <span class="require">*</span> </label>
-                                                        <input id="email" type="email">
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-12">
-                                                    <div class="form-submit">
-                                                        <button type="submit" id="submit"
-                                                            class="axil-btn btn-bg-primary w-auto">Submit Comment</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
+                                    @else
+                                        <p>برای افزودن نظر وارد حساب کاربری خود شوید <a href="/login" class="text-info">ورود</a></p>
+                                    @endif
                                     <!-- End Comment Respond  -->
                                 </div>
                                 <!-- End .col -->
@@ -443,7 +376,7 @@
                     <div class="slick-single-layout">
                         <div class="axil-product">
                             <div class="thumbnail">
-                                <a href="single-product.html">
+                                <a href="/product/{{$p->slug}}">
                                     <img src="{{$p->images[0]}}" alt="Product Images" class="r-1-1">
                                 </a>
                                 @if($p->off != 0)
@@ -453,8 +386,8 @@
                                 @endif
                                 <div class="product-hover-action">
                                     <ul class="cart-action">
-                                        <li class="wishlist"><a onclick="addWish(this , {{$p->id}})"><i
-                                            class="far fa-heart {{$p->wish == 1 ? 'text-danger' : ''}}" id="wish-i{{$p->id}}"></i></a></li>
+                                        <li class="wishlist  {{$p->wish == 1 ? 'wishShow' : ''}}"><a onclick="addWish(this , {{$p->id}})"><i
+                                            class="far fa-heart"></i></a></li>
                                         <li class="select-option cursor-pointer"><a data-bs-target="#quick-choose" data-bs-toggle="modal" onclick="openSizeModal({{$p->id}})">افزودن به سبد خرید</a></li>
                                         <li class="quickview"><a href="#" data-bs-toggle="modal"
                                             onclick="openProductModal({{$p->id }})"
@@ -465,7 +398,7 @@
                             </div>
                             <div class="product-content">
                                 <div class="inner">
-                                    <h5 class="title"><a href="single-product.html">{{$p->name}}</a></h5>
+                                    <h5 class="title"><a href="/product/{{$p->slug}}">{{$p->name}}</a></h5>
                                     <div class="product-price-variant">
                                         <span class="price current-price">{{$p->newPrice}}</span>
                                         @if($p->price != $p->newPrice)
@@ -542,8 +475,8 @@
             newNumber = newVal;
             $button.parent().find('input').val(newVal);
         });
-                
 
+       
         
     </script>
 @endsection

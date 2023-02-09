@@ -84,9 +84,9 @@
                             </div>
                             <ul class="mainmenu">
                                 <li class="menu-item-has-children">
-                                    <a href="#">دسته بندی ها</a>
-                                    <ul class="axil-submenu">
-                                        <li><a href="blog.html">Blog List</a></li>
+                                    <a class="cursor-pointer">دسته بندی ها</a>
+                                    <ul class="axil-submenu" id="header-categories">
+                                       
 
                                     </ul>
                                 </li>

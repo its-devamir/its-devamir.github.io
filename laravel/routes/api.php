@@ -19,9 +19,12 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::prefix('/')->namespace('App\Http\Controllers')->group(function () {
     Route::get('/getProduct' , 'ProductController@getProduct');
+    Route::get('/getProducts' , 'ProductController@getProducts');
     Route::post('/addCart/{product}' , 'ProductController@addCart');
     Route::get('/addWish/{product}' , 'ProductController@addWish');
     Route::get('/getSizes' , 'ProductController@getSizes');
+    Route::post('/sendRate' , 'ProductController@sendRate');
     Route::post('/getCart' , 'MainController@getCart');
     Route::post('/deleteCart' , 'MainController@deleteCart');
+    Route::get('/getCategories' , 'MainController@getCategories');
 });

@@ -7,10 +7,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
 
-class Comment extends Authenticatable
+class Comment extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    // use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -24,7 +26,9 @@ class Comment extends Authenticatable
         'body',
         'type',
     ];
-    protected $casts = [
-        'images' => 'array',
-    ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }

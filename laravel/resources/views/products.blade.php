@@ -41,14 +41,14 @@
                             </div>
                             <input type="hidden" name="sort" id="sortInp" value="newest">
                             <div class="toggle-list product-categories active">
-                                <h6 class="title">CATEGORIES</h6>
+                                <h6 class="title">دسته بندی ها</h6>
                                 <div class="shop-submenu">
                                     <ul>
-                                        <li class="">  <input type="radio" name="cat" id="cat" class="categories-radio" checked value="all">
-                                            <span>همه</span></li>
+                                        <li class="">  <input type="radio" {{Request::get('cat') == 'all' || !Request::get('cat')  ? 'checked' : ''}} name="cat" id="all" class="categories-radio d-none" value="all">
+                                            <label for="all">همه</label></li>
                                         @foreach ($categories as $c)
-                                            <li class="">  <input type="radio" name="cat" id="cat" class="categories-radio" value="{{$c->id}}">
-                                                <span>{{ $c->name }}</span></li>
+                                            <li class="">  <input type="radio" {{Request::get('cat') == $c->id ? 'checked' : '' }} name="cat" id="cat{{$c->id}}" class="categories-radio d-none" value="{{$c->id}}">
+                                                <label for="cat{{$c->id}}">{{ $c->name }}</label ></li>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -146,9 +146,8 @@
                     </div>
                     <!-- End .row -->
                     @if(count($products) > 0)
-                        <div class="row row--15">
-                            @foreach ($products as $p)
-                                <div class="col-xl-4 col-sm-6">
+                        <div class="row row--15" id="products-container">
+                                {{-- <div class="col-xl-4 col-sm-6">
                                     <div class="axil-product product-style-one mb--30">
                                         <div class="thumbnail">
                                             <a href="/product/{{ $p->slug }}">
@@ -184,12 +183,16 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div> --}}
+                                
+                                <div class="loading" id="productLoading">
+                                    <img src="/assets/images/icons/loading.svg" alt="loading">
                                 </div>
-                            @endforeach
                         </div>
                         <div class="text-center pt--20">
-                            <a href="#" class="axil-btn btn-bg-lighter btn-load-more">نمایش بیشتر</a>
+                            <button class="axil-btn btn-bg-lighter btn-load-more w-fit" data-page="2" id="loadMoreProducts" onclick="load(this)">نمایش بیشتر</button>
                         </div>
+                        
                     @else
                         <p>محصولی برای نمایش وجود ندارد</p>
                     @endif
@@ -230,6 +233,7 @@
     <script src="assets/js/product.js"></script>
     <script>
         
+    load();
         function setSort(el){
             $("#sortInp").val(el.value);
         }

@@ -44,7 +44,8 @@ let mainUrl = "http://127.0.0.1:8000/api";
 let cartUrl = `${mainUrl}/getCart`;
 let cart_items = "";
 let cart_footer =""
-function getCart() {
+function getCart()
+ {
     cart_items = "";
     ajax(
         cartUrl,
@@ -115,6 +116,8 @@ function getCart() {
                         <a href="checkout.html" class="axil-btn btn-bg-secondary checkout-btn">پرداخت</a>
                     </div>
                     `;
+                    
+            $(".cart-count")[0].textContent = json.products.length;
                 }else{
                   cart_items = 'سبد خرید خالی است'
                 }
@@ -123,7 +126,6 @@ function getCart() {
             }
             $("#cart-item-list")[0].innerHTML = cart_items;
             $("#cart-footer")[0].innerHTML = cart_footer;
-            $(".cart-count")[0].textContent = json.products.length;
             let price = $(".price");
             for (let i = 0; i < price.length; i++) {
                 price[i].innerHTML = price[i].textContent
@@ -161,6 +163,22 @@ function deleteCartItem(id){
         }
     } , "POST")
 }
+function getCategories(){
+    let categoriesUrl = `${mainUrl}/getCategories`;
+    let categories = '';
+    ajax(categoriesUrl , {} , json=>{
+        json.categories.forEach(c=>{
+            categories +=`
+                <li><a href="/products?cat=${c.id}">${c.name}</a></li>
+            `;
+        });
+        $("#header-categories")[0].innerHTML = categories;
+    }, "GET");
+}
+getCategories();
+
+
+
 let price = $(".price");
 let d = "";
 for (let i = 0; i < price.length; i++) {
