@@ -309,11 +309,11 @@
                                             <div class="rating-wrapper d-flex-center mb--40">
                                                 امتیاز شما <span class="require">*</span>
                                                 <div class="reating-inner ml--20">
-                                                   <input type="radio" id="rateNum5" name="rateNum" onclick="setrate(this)" value="5" class="d-none"> <label for="rateNum5" id="rateLabelNum5" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
-                                                   <input type="radio" id="rateNum4" name="rateNum" onclick="setrate(this)" value="4" class="d-none"> <label for="rateNum4" id="rateLabelNum4" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
-                                                   <input type="radio" id="rateNum3" name="rateNum" onclick="setrate(this)" value="3" class="d-none"> <label for="rateNum3" id="rateLabelNum3" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
-                                                   <input type="radio" id="rateNum2" name="rateNum" onclick="setrate(this)" value="2" class="d-none"> <label for="rateNum2" id="rateLabelNum2" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
-                                                   <input type="radio" id="rateNum1" name="rateNum" onclick="setrate(this)" value="1" class="d-none"> <label for="rateNum1" id="rateLabelNum1" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
+                                                   <input type="radio" id="rateNum5" name="rateNum" onclick="setrate(this)" value="5" class="d-none d-none2"> <label for="rateNum5" id="rateLabelNum5" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
+                                                   <input type="radio" id="rateNum4" name="rateNum" onclick="setrate(this)" value="4" class="d-none d-none2"> <label for="rateNum4" id="rateLabelNum4" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
+                                                   <input type="radio" id="rateNum3" name="rateNum" onclick="setrate(this)" value="3" class="d-none d-none2"> <label for="rateNum3" id="rateLabelNum3" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
+                                                   <input type="radio" id="rateNum2" name="rateNum" onclick="setrate(this)" value="2" class="d-none d-none2"> <label for="rateNum2" id="rateLabelNum2" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
+                                                   <input type="radio" id="rateNum1" name="rateNum" onclick="setrate(this)" value="1" class="d-none d-none2"> <label for="rateNum1" id="rateLabelNum1" class="cursor-pointer pro-rate me-2"><i class="fal fa-star text-warning"></i></label>
                                                 </div>
                                             </div>
                                             <input type="hidden" id="product_id" value="{{$product->id}}">

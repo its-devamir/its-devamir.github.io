@@ -27,4 +27,5 @@ Route::prefix('/')->namespace('App\Http\Controllers')->group(function () {
     Route::post('/getCart' , 'MainController@getCart');
     Route::post('/deleteCart' , 'MainController@deleteCart');
     Route::get('/getCategories' , 'MainController@getCategories');
+    Route::get('/searchProduct' , 'ProductController@searchProduct');
 });

@@ -27,7 +27,7 @@ class ProductController extends Controller
         return view('products', $data);
     }
     public function getProducts(Request $request){
-        $products = Product::Filter()->paginate(2);
+        $products = Product::Filter()->paginate(8);
         // dd($product  s);
         foreach ($products as $p) {
             $p->newPrice = $p->newPrice();
@@ -61,22 +61,9 @@ class ProductController extends Controller
     {
         $id = $request->id;
         $product = Product::where('id', $id)->first();
-        if ($product->off != 0) {
-            $off = $product->off;
-            $newPrice = ($product->price) * (100 - $off) / 100;
-        } else {
-            $newPrice = $product->price;
-        }
-        $product->newPrice = $newPrice;
-        if (auth()->user() != null) {
-            $productWish = User::where('id', auth()->user()->id)->where('wishlist', 'like', '%' . ',' . $product->id . ',' . '%')
-                ->orwhere('wishlist', 'like', '%' . ',' . $product->id . ']' . '%')
-                ->orwhere('wishlist', 'like', '%' . '[' . $product->id . ',' . '%')
-                ->orwhere('wishlist', 'like', '%' . '[' . $product->id . ']' . '%')->get();
-        } else {
-            $productWish = [];
-        }
-        $product->wish = count($productWish) > 0 ? true : false;
+        $product->newPrice = $product->newPrice();
+        $product->wish = count($product->getWishes()) > 0 ? true : false;
+        $product->rate = $product->rate();
         if ($product != null) {
             return response()->json([
                 "status" => 'success',
@@ -180,5 +167,16 @@ class ProductController extends Controller
                 'status' => 'login'
             ]);
         }
+    }
+    public function searchProduct(Request $request){
+        $products = Product::where('name' , 'like' , '%'.$request->search.'%')->paginate(8);
+        foreach($products as $p){
+            $p->newPrice = $p->newPrice();
+            $p->rate = $p->rate();
+            $p->wish = count($p->getWishes()) > 0 ? true : false;
+        }
+        return response()->json([
+            'products' => $products
+        ]);
     }
 }

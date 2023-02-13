@@ -90,6 +90,9 @@ body{
   .w-70p{
     width: 70px !important;
   }
+  .w-100p{
+    width: 100px !important;
+  }
   .pro-rate:hover ~ .pro-rate i , .pro-rate:hover i{
     font-weight: 800 !important;
   }
@@ -100,12 +103,12 @@ body{
     display: flex;
     flex-direction: row-reverse;
   }
-  input[type=checkbox].d-none~label:before, input[type=radio].d-none~label:before{
+  input[type=checkbox].d-none2~label:before, input[type=radio].d-none2~label:before{
     content: none;
   }
-  input[type=checkbox].d-none~label:after, input[type=radio].d-none~label:after{
+  input[type=checkbox].d-none2~label:after, input[type=radio].d-none2~label:after{
     content: none;
   }
-  input[type=checkbox].d-none~label, input[type=radio].d-none~label{
+  input[type=checkbox].d-none2~label, input[type=radio].d-none2~label{
     padding: 0;
   }

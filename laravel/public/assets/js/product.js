@@ -194,11 +194,15 @@ function openProductModal(id) {
                                     <div class="inner">
                                         <div class="product-rating">
                                             <div class="star-rating">
-                                                <img src="assets/images/icons/rate.png" alt="Rate Images">
+                                                <i class="${json.product.rate < 1? 'far' : 'fas'} fa-star"></i>
+                                                <i class="${json.product.rate < 2? 'far' : 'fas'} fa-star"></i>
+                                                <i class="${json.product.rate < 3? 'far' : 'fas'} fa-star"></i>
+                                                <i class="${json.product.rate < 4? 'far' : 'fas'} fa-star"></i>
+                                                <i class="${json.product.rate < 5? 'far' : 'fas'} fa-star"></i>
                                             </div>
-                                            <div class="review-link">
+                                            <!-- <div class="review-link">
                                                 <a href="#">(<span>1</span> customer reviews)</a>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <h3 class="product-title">${
                                             json.product.name
@@ -550,4 +554,56 @@ function addRate(el){
             }
         } , "POST")
     }
+}
+
+function searchProduct(el){
+    let searchUrl = `${mainUrl}/searchProduct?search=${el.value}`;
+    let searchCon = '';
+    let searchItem = '';
+    ajax(searchUrl , {} , json=>{
+        json.products.data.forEach(p=>{
+            searchItem +=`
+            <div class="axil-product-list">
+            <div class="thumbnail">
+                <a href="/product/${p.slug}">
+                    <img src="${p.images[0]}" alt="${p.name}" class="w-100p r-1-1">
+                </a>
+            </div>
+            <div class="product-content">
+                <div class="product-rating">
+                    <span class="rating-icon">
+                        <i class="${p.rate < 1 ? 'fal' : 'fas'} fa-star"></i>
+                        <i class="${p.rate < 2 ? 'fal' : 'fas'} fa-star"></i>
+                        <i class="${p.rate < 3 ? 'fal' : 'fas'} fa-star"></i>
+                        <i class="${p.rate < 4 ? 'fal' : 'fas'} fa-star"></i>
+                        <i class="${p.rate < 5 ? 'fal' : 'fas'} fa-star"></i>
+                    </span>
+                    <!-- <span class="rating-number"><span>100+</span> Reviews</span> -->
+                </div>
+                <h6 class="product-title"><a href="/product/${p.slug}">${p.name}</a></h6>
+                <div class="product-price-variant">
+                    <span class="price current-price">${p.newPrice} تومان</span>
+                    ${p.newPrice != p.price ? `<span class="price old-price">${p.price} تومان</span>` : ''}
+                </div>
+                <div class="product-cart">
+                    <a onclick="addCart(this , ${p.id})" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
+                    <a onclick="addWish(this , ${p.id})" class="cart-btn"><i class="fal fa-heart ${p.wish == 1 ? 'wishShow' : ''}"></i></a>
+                </div>
+            </div>
+        </div>
+            `;
+        });
+        searchCon = `
+        <div class="search-result-header">
+            <h6 class="title">${json.products.total} نتیجه یافت شد</h6>
+            <a href="/products?search=${el.value}" class="view-all">نمایش همه</a>
+        </div>
+        <div class="psearch-results">
+            ${searchItem}
+            
+        </div>
+        `;
+        // console.log(json.products.length)
+        $("#searchModalItems")[0].innerHTML = searchCon;
+    },  "GET")
 }

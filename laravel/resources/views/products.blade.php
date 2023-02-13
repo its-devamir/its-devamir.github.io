@@ -40,6 +40,9 @@
                                 <button class="sidebar-close filter-close-btn"><i class="fas fa-times"></i></button>
                             </div>
                             <input type="hidden" name="sort" id="sortInp" value="newest">
+                            <div class="border border-2 col-12 rounded-4 mb-4">
+                                <input type="text" name="search" class="border-none" value="{{Request::get('search')}}" placeholder="عبارت جستجو را وارد کنید">
+                            </div>
                             <div class="toggle-list product-categories active">
                                 <h6 class="title">دسته بندی ها</h6>
                                 <div class="shop-submenu">
@@ -129,14 +132,15 @@
                                     <!-- Start Single Select  -->
                                     <span class="filter-results"></span>
                                     <select class="single-select" id="sort" onchange="setSort(this)">
-                                        <option value="newest">جدیدترین ها</option>
-                                        <option value="cheep">ارزان ترین ها</option>
-                                        <option value="expensive">گران ترین ها</option>
-                                        <option value="">پرفرروش ترین ها</option>
-                                        <option value="off">تخفیف دارها</option>
+                                        <option {{Request::get('sort') == 'newest' ? 'selected' : ''}} value="newest">جدیدترین ها</option>
+                                        <option {{Request::get('sort') == 'cheep' ? 'selected' : ''}} value="cheep">ارزان ترین ها</option>
+                                        <option {{Request::get('sort') == 'expensive' ? 'selected' : ''}} value="expensive">گران ترین ها</option>
+                                        {{-- <option {{Request::get('sort') == '' ? 'selected' : ''}} value="">پرفرروش ترین ها</option> --}}
+                                        <option {{Request::get('sort') == 'off' ? 'selected' : ''}} value="off">تخفیف دارها</option>
                                     </select>
                                     <!-- End Single Select  -->
                                 </div>
+                                
                                 <div class="d-lg-none">
                                     <button class="product-filter-mobile filter-toggle"><i class="fas fa-filter"></i>
                                         فیلتر</button>

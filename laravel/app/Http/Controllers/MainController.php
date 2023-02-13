@@ -65,4 +65,5 @@ class MainController extends Controller
             'categories' => $cat
         ]);
     }
+    
 }

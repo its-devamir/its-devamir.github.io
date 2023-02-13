@@ -63,6 +63,10 @@ class Product extends Model
         $minPrice = request('minPrice');
         $maxPrice = request('maxPrice');
         $sort = request('sort');
+        $search = request('search');
+        if(isset($search) && trim($search) != null){
+            $query->where('name' , 'like' , '%'.$search.'%');
+        }
         if (isset($cat) && trim($cat) != null) {
             // dd($cat);
             if ($cat != 'all') $query->where('cat_id', intval($cat));
