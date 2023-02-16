@@ -40,9 +40,10 @@ function load(el = null) {
                                 p.id
                             })"><i
                                         class="far fa-heart" id="wish-i${p.id}"></i></a></li>
-                            <li class="select-option cursor-pointer"><a  data-bs-target="#quick-choose" data-bs-toggle="modal" onclick="openSizeModal(${
+                            <li class="select-option cursor-pointer">
+                            ${p.amount != 0 ? `<a  data-bs-target="#quick-choose" data-bs-toggle="modal" onclick="openSizeModal(${
                                 p.id
-                            })">افزودن به سبد خرید</a></li>
+                            })">افزودن به سبد خرید</a>` : `<a>ناموجود</a>`}</li>
                             <li class="quickview"><a href="#" data-bs-toggle="modal"
                                     onclick="openProductModal(${p.id})"
                                     data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a>
@@ -274,10 +275,11 @@ function openProductModal(id) {
 
                                             <!-- Start Product Action  -->
                                             <ul class="product-action d-flex-center mb--0">
-                                                <li class="add-to-cart"><a
+                                                <li class="add-to-cart">${json.product.amount != 0 ? `<a
                                                         class="axil-btn btn-bg-primary" onclick="addCart(this , ${
                                                             json.product.id
-                                                        })" data-bs-dismiss="modal" aria-label="Close">افزودن به سبد خرید</a></li>
+                                                        })" data-bs-dismiss="modal" aria-label="Close">افزودن به سبد خرید</a>`: `<a
+                                                        class="axil-btn btn-bg-primary">ناموجود</a>`}</li>
                                                 <li class="wishlist"><a onclick="addWish(this , ${
                                                     json.product.id
                                                 })"
@@ -371,7 +373,7 @@ function openProductModal(id) {
 
 let sizeModal = "";
 let smallSizes = "";
-function openSizeModal(id) {
+async function openSizeModal(id) {
     smallSizes = "";
     let url = `${mainUrl}/getSizes?id=${id}`;
     ajax(
@@ -424,8 +426,7 @@ function openSizeModal(id) {
 }
 
 
-
-function addWish(el, id) {
+function addWish(el, id , item=null) {
     let url = `${mainUrl}/addWish/${id}`;
     ajax(
         url,
@@ -433,6 +434,9 @@ function addWish(el, id) {
         (json) => {
             if (json.status == "remove") {
                 el.classList.remove("wishShow");
+                if(item){
+                    $(`#wish-row${id}`)[0].remove();
+                }
             } else if (json.status == "add") {
                 el.classList.add("wishShow");
             } else if (json.status == "login") {
@@ -556,54 +560,3 @@ function addRate(el){
     }
 }
 
-function searchProduct(el){
-    let searchUrl = `${mainUrl}/searchProduct?search=${el.value}`;
-    let searchCon = '';
-    let searchItem = '';
-    ajax(searchUrl , {} , json=>{
-        json.products.data.forEach(p=>{
-            searchItem +=`
-            <div class="axil-product-list">
-            <div class="thumbnail">
-                <a href="/product/${p.slug}">
-                    <img src="${p.images[0]}" alt="${p.name}" class="w-100p r-1-1">
-                </a>
-            </div>
-            <div class="product-content">
-                <div class="product-rating">
-                    <span class="rating-icon">
-                        <i class="${p.rate < 1 ? 'fal' : 'fas'} fa-star"></i>
-                        <i class="${p.rate < 2 ? 'fal' : 'fas'} fa-star"></i>
-                        <i class="${p.rate < 3 ? 'fal' : 'fas'} fa-star"></i>
-                        <i class="${p.rate < 4 ? 'fal' : 'fas'} fa-star"></i>
-                        <i class="${p.rate < 5 ? 'fal' : 'fas'} fa-star"></i>
-                    </span>
-                    <!-- <span class="rating-number"><span>100+</span> Reviews</span> -->
-                </div>
-                <h6 class="product-title"><a href="/product/${p.slug}">${p.name}</a></h6>
-                <div class="product-price-variant">
-                    <span class="price current-price">${p.newPrice} تومان</span>
-                    ${p.newPrice != p.price ? `<span class="price old-price">${p.price} تومان</span>` : ''}
-                </div>
-                <div class="product-cart">
-                    <a onclick="addCart(this , ${p.id})" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
-                    <a onclick="addWish(this , ${p.id})" class="cart-btn"><i class="fal fa-heart ${p.wish == 1 ? 'wishShow' : ''}"></i></a>
-                </div>
-            </div>
-        </div>
-            `;
-        });
-        searchCon = `
-        <div class="search-result-header">
-            <h6 class="title">${json.products.total} نتیجه یافت شد</h6>
-            <a href="/products?search=${el.value}" class="view-all">نمایش همه</a>
-        </div>
-        <div class="psearch-results">
-            ${searchItem}
-            
-        </div>
-        `;
-        // console.log(json.products.length)
-        $("#searchModalItems")[0].innerHTML = searchCon;
-    },  "GET")
-}

@@ -112,3 +112,6 @@ body{
   input[type=checkbox].d-none2~label, input[type=radio].d-none2~label{
     padding: 0;
   }
+  .axil-product-table{
+    font-family:iransans;
+  }

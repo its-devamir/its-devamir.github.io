@@ -18,5 +18,7 @@ Route::prefix('/')->namespace('App\Http\Controllers')->group(function () {
     Route::get('/products', 'ProductController@index')->name('products');
     Route::get('/blog/{slug}', 'BlogController@show')->name('blog');
     Route::get('/blogs', 'BlogController@index')->name('blogs');
+    Route::get('/cart', 'ProductController@cartShow')->name('cartShow');
+    Route::get('/wishlist', 'ProductController@wishList')->name('wishlist');
 });
 

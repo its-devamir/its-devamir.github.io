@@ -25,12 +25,7 @@ class MainController extends Controller
             $products = [];
             foreach ($cart as $c) {
                 $product = Product::where('id', $c->pro_id)->first();
-                if ($product->off != 0) {
-                    $off = $product->off;
-                    $newPrice = ($product->price) * (100 - $off) / 100;
-                } else {
-                    $newPrice = $product->price;
-                }
+                $newPrice = $product->newPrice();
                 $subTotal = $subTotal + ($newPrice*$c->number);
                 $product->cart_id = $c->id;
                 $product->newPrice = $newPrice;

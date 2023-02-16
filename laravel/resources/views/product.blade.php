@@ -114,7 +114,12 @@
 
                                     <!-- Start Product Action  -->
                                     <ul class="product-action d-flex-center mb--0">
-                                        <li class="add-to-cart"><a class="axil-btn btn-bg-primary cursor-pointer" onclick="addCart(this , {{$product->id}})"> افزودن به سبد خرید</a>
+                                        <li class="add-to-cart">
+                                            @if($product->amount != 0)
+                                                <a class="axil-btn btn-bg-primary cursor-pointer" onclick="addCart(this , {{$product->id}})"> افزودن به سبد خرید</a>
+                                            @else
+                                            <a class="axil-btn btn-bg-primary cursor-pointer">ناموجود</a>
+                                            @endif
                                         </li>
                                         <li class="wishlist"><a onclick="addWish(this , {{$product->id}})" class="axil-btn wishlist-btn {{$product->wish == 1 ? 'wishShow' : ''}}"><i
                                                     class="far fa-heart"></i></a></li>

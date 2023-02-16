@@ -41,6 +41,11 @@ loading();
 
 let mainUrl = "http://127.0.0.1:8000/api";
 
+function setNumberCart(el){
+    console.log(el)
+}
+
+
 let cartUrl = `${mainUrl}/getCart`;
 let cart_items = "";
 let cart_footer =""
@@ -98,7 +103,7 @@ function getCart()
                                     <span>${p.size}</span>
                                 </div>
                                 <div class="pro-qty pro-qtyCart item-quantity">
-                                    <input type="number" class="quantity-input" value="${
+                                    <input type="number" class="quantity-input" onchange="setNumberCart(this)" value="${
                                         p.number
                                     }">
                                 </div>
@@ -112,7 +117,7 @@ function getCart()
                         <span class="subtotal-amount price">${json.subTotal} تومان</span>
                     </h3>
                     <div class="group-btn">
-                        <a href="cart.html" class="axil-btn btn-bg-primary viewcart-btn">نمایش سبد خرید</a>
+                        <a href="/cart" class="axil-btn btn-bg-primary viewcart-btn">نمایش سبد خرید</a>
                         <a href="checkout.html" class="axil-btn btn-bg-secondary checkout-btn">پرداخت</a>
                     </div>
                     `;
@@ -147,7 +152,7 @@ function getCart()
                         newVal = 0;
                     }
                 }
-                // newrt = newVal;
+                setNumberCart(newVal);
                 $button.parent().find("input").val(newVal);
             });
         },
@@ -155,11 +160,14 @@ function getCart()
     );
 }
 getCart();
-function deleteCartItem(id){
+function deleteCartItem(id , item=null){
     let deleteCartUrl = `${mainUrl}/deleteCart?id=${id}`;
     ajax(deleteCartUrl , {} , json=>{
         if(json.status == 'success'){
             getCart();
+            if(item){
+                $(`#cart-row${id}`)[0].remove();
+            }
         }
     } , "POST")
 }
@@ -187,3 +195,70 @@ for (let i = 0; i < price.length; i++) {
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+
+function searchProduct(el){
+    let searchUrl = `${mainUrl}/searchProduct?search=${el.value}`;
+    let searchCon = '';
+    let searchItem = '';
+    ajax(searchUrl , {} , json=>{
+        json.products.data.forEach(p=>{
+            searchItem +=`
+            <div class="axil-product-list">
+            <div class="thumbnail">
+                <a href="/product/${p.slug}">
+                    <img src="${p.images[0]}" alt="${p.name}" class="w-100p r-1-1">
+                </a>
+            </div>
+            <div class="product-content">
+                <div class="product-rating">
+                    <span class="rating-icon">
+                        <i class="${p.rate < 1 ? 'fal' : 'fas'} fa-star"></i>
+                        <i class="${p.rate < 2 ? 'fal' : 'fas'} fa-star"></i>
+                        <i class="${p.rate < 3 ? 'fal' : 'fas'} fa-star"></i>
+                        <i class="${p.rate < 4 ? 'fal' : 'fas'} fa-star"></i>
+                        <i class="${p.rate < 5 ? 'fal' : 'fas'} fa-star"></i>
+                    </span>
+                    <!-- <span class="rating-number"><span>100+</span> Reviews</span> -->
+                </div>
+                <h6 class="product-title"><a href="/product/${p.slug}">${p.name}</a></h6>
+                <div class="product-price-variant">
+                    <span class="price current-price">${p.newPrice} تومان</span>
+                    ${p.newPrice != p.price ? `<span class="price old-price">${p.price} تومان</span>` : ''}
+                </div>
+                <div class="product-cart">
+                    ${p.amount != 0 ? `<a data-bs-target="#quick-choose" data-bs-toggle="modal"  onclick="openSizeModal(${p.id})" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>`:`<a class="cart-btn"><i class="fal fa-shopping-cart  text-secondary"></i></a>`}
+                    <a onclick="addWish(this , ${p.id})" class="cart-btn ${p.wish == 1 ? 'wishShow' : ''}"><i class="fal fa-heart"></i></a>
+                </div>
+            </div>
+        </div>
+            `;
+        });
+        searchCon = `
+        <div class="search-result-header">
+            <h6 class="title">${json.products.total} نتیجه یافت شد</h6>
+            <a href="/products?search=${el.value}" class="view-all">نمایش همه</a>
+        </div>
+        <div class="psearch-results">
+            ${searchItem}
+            
+        </div>
+        <div class="modal fade" id="quick-choose" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center" id="sizeModal">
+                   
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+        `;
+        // console.log(json.products.length)
+        $("#searchModalItems")[0].innerHTML = searchCon;
+    },  "GET")
+}
+

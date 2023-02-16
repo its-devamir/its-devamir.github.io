@@ -94,7 +94,7 @@
                                     <a href="{{ route('home') }}">خانه</a>
                                 </li>
                                 <li>
-                                    <a href="#">فروشگاه</a>
+                                    <a href="{{route('products')}}">فروشگاه</a>
                                 </li>
 
                                 <li>
@@ -114,7 +114,7 @@
                                 </a>
                             </li>
                             <li class="wishlist">
-                                <a href="wishlist.html">
+                                <a href="{{route('wishlist')}}">
                                     <i class="flaticon-heart"></i>
                                 </a>
                             </li>

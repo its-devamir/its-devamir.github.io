@@ -179,4 +179,41 @@ class ProductController extends Controller
             'products' => $products
         ]);
     }
+    public function cartShow(){
+        if(auth()->user() != null){
+            $subTotal = 0;
+            $cart = Cart::where('user_id', auth()->user()->id)->get();
+            $products = [];
+            foreach ($cart as $c) {
+                $product = Product::where('id', $c->pro_id)->first();
+                $newPrice = $product->newPrice();
+                $subTotal = $subTotal + ($newPrice*$c->number);
+                $product->cart_id = $c->id;
+                $product->newPrice = $newPrice;
+                $product->number = $c->number;
+                $product->size = $c->size;
+                $product->subTotal = ($newPrice*$c->number);
+                array_push($products, $product);
+            }
+            $data = [
+                "products" => $products,
+                "subTotal" =>$subTotal
+            ];
+            return view('cart' , $data);
+        }else{
+            return redirect('login');
+        }
+    }
+    public function wishlist(){
+        if(auth()->user() != null){
+            $products = [];
+            foreach(auth()->user()->wishlist as $p){
+                $product = Product::where('id' , $p)->first();
+                array_push($products , $product);
+            }
+            return view('wishlist' , compact('products'));
+        }else{
+            return redirect('/login');
+        }
+    }
 }
