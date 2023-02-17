@@ -20,5 +20,7 @@ Route::prefix('/')->namespace('App\Http\Controllers')->group(function () {
     Route::get('/blogs', 'BlogController@index')->name('blogs');
     Route::get('/cart', 'ProductController@cartShow')->name('cartShow');
     Route::get('/wishlist', 'ProductController@wishList')->name('wishlist');
+    Route::get('/contact', 'ContactController@index')->name('contact');
+    Route::post('/contact', 'ContactController@send')->name('contact');
 });
 

@@ -101,7 +101,7 @@
                                     <a href="#">مجله</a>
                                 </li>
                                 <li><a href="about-us.html">درباره ما</a></li>
-                                <li><a href="contact.html">تماس با ما</a></li>
+                                <li><a href="{{route('contact')}}">تماس با ما</a></li>
                             </ul>
                         </nav>
                         <!-- End Mainmanu Nav -->
