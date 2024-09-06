@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Popup Extension</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/datatable.bootstrap5.min.css">
+    <link rel="stylesheet" href="./vendor/datatable.min.css">
+    <link rel="stylesheet" href="./vendor/style.css">
+    <script>
+        if(!document.cookie.includes('API_KEY') && !document.cookie.includes('Name'))
+        {
+            alert('اول لاگین بچه جون')
+            window.location.assign('.')
+        }
+    </script>
+</head>
+
+<body class="dir-rtl">
+    <div class="container-fluid">
+        <h1 id="content"><span id="theName"></span> خوش اومدی :)</h1>
+        <p>مثلا اینجا هم یه توضیح ریز</p>
+        <hr>
+        <div class="row" id="rowClass">
+
+            <div class="col-md-6 col-12">
+                <table id="classes" class="display">
+                    
+                </table>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="card d-none" id="guideBox">
+                    <h5 class="card-header">راهنما</h5>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>مجموع واحد ها:</div>
+                            <div class="text-success" id="unitOuttaUnits"> 0 / 20</div>
+                        </div>
+                        <h5 class="card-title mt-4">دروس انتخاب شده</h5>
+                        <ul class="list-group" id="ulSelectedClasses">
+                            هنوز هیچی انتخاب
+                        </ul>
+                        <a href="#" class="btn btn-primary mt-3 d-none" id="selectTimeMasterBtn">انتخاب اساتید/تایم</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row" id="rowSelect">
+            <div class="card d-none">
+                <h5 class="card-header">برنامه هفتگی</h5>
+                <div class="card-body">
+                    <table class="table table-striped-columns" id="weekTable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>شنبه</td>
+                            </tr>
+                            <tr>
+                                <td>یک..</td>
+                            </tr>
+                            <tr>
+                                <td>دو..</td>
+                            </tr>
+                            <tr>
+                                <td>سه ..</td>
+                            </tr> 
+                            <tr>
+                                <td>چهار..</td>
+                            </tr>
+                            <tr>
+                                <td>پنج..</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <div class="accordion accordion-flush col-12 " id="accordionTimeMaster">
+            </div>
+
+        </div>
+    </div>
+<!-- Modal -->
+<div class="modal fade" id="selectedModal" tabindex="-1" aria-labelledby="selectedModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="selectedModal">خلاصه کلاسات</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+          <button type="button" class="btn btn-primary" onclick="generateCode()">آره خودشه</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="modal fade" id="passedModal" tabindex="-1" aria-labelledby="passedModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="passedModalLabel">بگو بینم</h1>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-start">این درسو</th>
+                                <th scope="col" class="text-center">پاس کردی؟</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                        <tbody id="passedBody">
+
+                        </tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                    <button type="button" class="btn btn-primary" onclick="make_classes_with_passed()">بریم
+                        ادامش</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./vendor/bootstrap.bundle.min.js"></script>
+    <script src="./vendor/jquery.min.js"></script>
+    <script src="./vendor/datatable.min.js"></script>
+    <script src="./vendor/js.cookie.min.js"></script>
+    <script src="./vendor/main.js"></script>
+    <!-- <script>loadDevil()</script> -->
+
+</body>
+
+</html>
