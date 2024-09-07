@@ -40,7 +40,7 @@ if (maForm) {
         Cookies.set('name', msg.user.name);
         Cookies.set('username', msg.user.username);
         Cookies.set('gpa', msg.user.gpa);
-        Cookies.set('gender', msg.user.gender);
+        Cookies.set('gender', msg.user.gpa);
         Cookies.set('password', msg.user.password);
         window.location.assign('bot.html')
       }).fail((jqXHR, textStatus) => {
@@ -98,6 +98,7 @@ let classes_table = document.getElementById("classes");
 
 let JSON_ARRAY = [];
 const CLASSES = [];
+const CLASSES_ALL = [];
 const PASSED = [];
 const UNITS_LIMIT = GPA == "a" ? 24 : 20;
 let UNITS = 0;
@@ -333,6 +334,7 @@ function make_classes_with_passed() {
 
     console.log(row.title,has_this_class, req_needed, gender_limited);
     if (!has_this_class && !req_needed && !gender_limited) CLASSES.push(row);
+    if (!req_needed && !gender_limited) CLASSES_ALL.push(row);
   });
 
   CLASSES.forEach((row) => {
@@ -387,13 +389,13 @@ function make_classes_with_passed() {
 
 selected_ids = [];
 function get_class(title) {
-  return JSON_ARRAY.find((c) => c.title === title);
+  return CLASSES_ALL.find((c) => c.title === title);
 }
 function get_classes(title) {
-  return JSON_ARRAY.filter((c) => c.title === title)
+  return CLASSES_ALL.filter((c) => c.title === title)
 }
 function get_class_by_code(code) {
-  return JSON_ARRAY.find((c) => c.code === code);
+  return CLASSES_ALL.find((c) => c.code === code);
 }
 function select_class(title) {
   let c = get_class(title);
@@ -669,3 +671,4 @@ function generateCode() {
   alert("کد اینجکت کپی شد :)")
   console.log(str);
 }
+
