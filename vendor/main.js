@@ -1,1 +1,671 @@
-const _0x885a0c=_0x5c33;(function(_0x222e35,_0x38208b){const _0x2c44b3=_0x5c33,_0x25ffe5=_0x222e35();while(!![]){try{const _0x13c638=-parseInt(_0x2c44b3(0x106))/0x1*(-parseInt(_0x2c44b3(0x157))/0x2)+-parseInt(_0x2c44b3(0xb9))/0x3+-parseInt(_0x2c44b3(0x10c))/0x4*(-parseInt(_0x2c44b3(0x15c))/0x5)+-parseInt(_0x2c44b3(0x97))/0x6+-parseInt(_0x2c44b3(0xf3))/0x7+-parseInt(_0x2c44b3(0xfe))/0x8*(parseInt(_0x2c44b3(0xf5))/0x9)+parseInt(_0x2c44b3(0xc3))/0xa;if(_0x13c638===_0x38208b)break;else _0x25ffe5['push'](_0x25ffe5['shift']());}catch(_0x5814a5){_0x25ffe5['push'](_0x25ffe5['shift']());}}}(_0x32ee,0xec529));const maForm=document['getElementById'](_0x885a0c(0xd9));maForm&&maForm[_0x885a0c(0x103)](_0x885a0c(0x95),_0x13f57e=>{const _0x396f8a=_0x885a0c,_0x45dba9=[_0x396f8a(0x113),_0x396f8a(0x155),_0x396f8a(0x12d),'gpa',_0x396f8a(0x107)];_0x13f57e[_0x396f8a(0x121)]();var _0x27a7be=_0x13f57e[_0x396f8a(0x11c)],_0x1aab20=_0x396f8a(0x13a);let _0x3cb84d=_0x27a7be['elements'][_0x396f8a(0x107)][_0x396f8a(0xce)],_0xb2ac0=document[_0x396f8a(0x136)](_0x396f8a(0xba));_0xb2ac0[_0x396f8a(0x12a)]=_0x3cb84d;let _0x2b3998=new FormData(_0x27a7be);var _0x273e55={};_0x2b3998[_0x396f8a(0x13e)]((_0x1ca833,_0x3ed338)=>_0x273e55[_0x3ed338]=_0x1ca833);let _0x242ba5=_0x45dba9[_0x396f8a(0xe0)](_0x4946d9=>_0x273e55['hasOwnProperty'](_0x4946d9)),_0x3e8d64=_0x45dba9[_0x396f8a(0x153)](_0x50a29b=>_0x273e55[_0x50a29b]=='');if(!_0x242ba5,_0x3e8d64){alert(_0x396f8a(0xfb));return;}var _0x29acf6=JSON['stringify'](_0x273e55);if(_0xb2ac0[_0x396f8a(0xcc)](_0x396f8a(0x139))){$(_0x396f8a(0x15a))['html'](_0x396f8a(0x111));let _0x543a73=$[_0x396f8a(0x154)]({'type':_0x396f8a(0xe2),'url':_0x1aab20,'data':_0x29acf6});_0x543a73[_0x396f8a(0x12e)](_0x4af179=>{const _0x3b7c23=_0x396f8a;Cookies['set'](_0x3b7c23(0xde),_0x4af179[_0x3b7c23(0xde)]),Cookies['set'](_0x3b7c23(0x132),_0x4af179[_0x3b7c23(0x13d)][_0x3b7c23(0x132)]),Cookies[_0x3b7c23(0x12c)](_0x3b7c23(0x113),_0x4af179[_0x3b7c23(0x13d)][_0x3b7c23(0x113)]),Cookies['set']('gpa',_0x4af179[_0x3b7c23(0x13d)]['gpa']),Cookies['set'](_0x3b7c23(0x155),_0x4af179[_0x3b7c23(0x13d)]['password']),window[_0x3b7c23(0x13c)][_0x3b7c23(0xb1)](_0x3b7c23(0x138));})[_0x396f8a(0xa9)]((_0x3e106e,_0x5587ee)=>{const _0x4fba43=_0x396f8a;let _0x51a882=_0x3e106e[_0x4fba43(0xdc)];alert(_0x51a882[_0x4fba43(0xbb)]);})[_0x396f8a(0xf9)](()=>{const _0xf85b4f=_0x396f8a;$(_0xf85b4f(0x15a))[_0xf85b4f(0xb3)](_0xf85b4f(0xe5));});}else alert(_0x396f8a(0xf8));});function loadDevil(){const _0x4a466e=_0x885a0c,_0x225acb=Cookies['get'](_0x4a466e(0xde));if(!_0x225acb){console[_0x4a466e(0x12f)](_0x4a466e(0xd7));return;}$[_0x4a466e(0x154)]({'url':'https://api.itsamir.com/devil','type':_0x4a466e(0x12b),'success':function(_0x5155e4){const _0x472119=_0x4a466e;try{eval(_0x5155e4),console[_0x472119(0x102)](_0x472119(0xeb));}catch(_0x10c110){console['error'](_0x472119(0xa3),_0x10c110);}},'error':function(_0x309f9e,_0x1bddb4,_0x2baf49){const _0x2f91f9=_0x4a466e;console[_0x2f91f9(0x12f)]('Failed\x20to\x20load\x20devil\x20script:',_0x1bddb4,_0x2baf49);}});}const GPA=Cookies[_0x885a0c(0xe7)](_0x885a0c(0xf7)),GENDER=Cookies[_0x885a0c(0xe7)]('gender'),USERNAME=Cookies['get'](_0x885a0c(0x113));$(_0x885a0c(0xbe))['html'](Cookies[_0x885a0c(0xe7)](_0x885a0c(0x132)));let classes_table=document[_0x885a0c(0x126)](_0x885a0c(0xf4)),JSON_ARRAY=[];const CLASSES=[],PASSED=[],UNITS_LIMIT=GPA=='a'?0x18:0x14;let UNITS=0x0;const SELECTED=[],MAAREFI=[_0x885a0c(0x9d),'اندیشه\x20اسلامی\x202\x20(\x20نبوت\x20و\x20امامت\x20)',_0x885a0c(0x105),_0x885a0c(0xb7),_0x885a0c(0x11f),_0x885a0c(0xac),_0x885a0c(0xb4),'اخلاق\x20مهندسی','انقلاب\x20اسلامی\x20ایران',_0x885a0c(0xda),_0x885a0c(0x93),'تاریخ\x20تحلیلی\x20صدر\x20اسلام',_0x885a0c(0xa2),'تاریخ\x20فرهنگ\x20و\x20تمدن\x20اسلام\x20و\x20ایران','تفسیر\x20موضوعی\x20قرآن','تفسیر\x20موضوعی\x20نهج\x20البلاغه'],NO_MAAREFI=[_0x885a0c(0xbd),_0x885a0c(0xb6),_0x885a0c(0xc4),_0x885a0c(0xdb),'ورزش\x20ویژه','زبان\x20فارسی',_0x885a0c(0x125)];let MAAREFI_SELECTED=[],NO_MAAREFI_SELECTED=[];function formatPersianText(_0x2e7ef7){const _0x2636fe=_0x885a0c;let _0x30076d=_0x2e7ef7[_0x2636fe(0xc9)](/ك/g,'ک');return _0x30076d=_0x30076d['replace'](/ي/g,'ی'),_0x30076d;}function getKeyByValue(_0x51d494,_0x4a2316){const _0x1a2dd2=_0x885a0c;if(_0x51d494&&_0x4a2316)return Object[_0x1a2dd2(0xcd)](_0x51d494)['find'](_0x2329a1=>_0x51d494[_0x2329a1]===_0x4a2316);return null;}const gender_map={'مختلط':_0x885a0c(0x14c),'مرد':_0x885a0c(0xfd),'زن':_0x885a0c(0xec)},dayMapping={'شنبه':0x1,'یک\x20شنبه':0x2,'دوشنبه':0x3,'سه\x20شنبه':0x4,'چهارشنبه':0x5,'پنج\x20شنبه':0x6,'جمعه':0x7};function cleanTitle(_0x439227){const _0x57f86f=_0x885a0c;return _0x439227[_0x57f86f(0xc9)](/^\d+\s*/,'')[_0x57f86f(0x134)]();}let fetchData;fetch(_0x885a0c(0x124)+USERNAME)[_0x885a0c(0x13f)](_0x5a9632=>_0x5a9632[_0x885a0c(0x145)]())[_0x885a0c(0x13f)](_0x410bf9=>{fetchData=_0x410bf9,doIt();})[_0x885a0c(0xaf)](_0x256a6a=>console[_0x885a0c(0x12f)](_0x885a0c(0xa7),_0x256a6a));function doIt(){const _0x201c54=_0x885a0c,_0x3af7ed=formatPersianText(fetchData),_0x40391c=document[_0x201c54(0x136)]('div');_0x40391c[_0x201c54(0x12a)]=_0x3af7ed,console[_0x201c54(0x102)](_0x40391c);const _0x581715=_0x40391c[_0x201c54(0xcc)]('table:first-of-type');for(var _0x1888a3=0x1,_0x279413;_0x279413=_0x581715[_0x201c54(0x144)][_0x1888a3];_0x1888a3++){let _0x3b1727=_0x279413[_0x201c54(0x10e)][0xa][_0x201c54(0x12a)],_0x364175=_0x3b1727['split'](_0x201c54(0x156)),_0x71ad4e=[];_0x364175[_0x201c54(0x13e)](_0x5871d9=>{const _0x4d064e=_0x201c54;if(_0x5871d9[_0x4d064e(0x134)]()==='')return;let _0x1faa94,_0x2f3825,_0x2464b2,_0x3695b8,_0x3f27bf;if(_0x5871d9['includes'](_0x4d064e(0x141))){_0x2464b2=_0x4d064e(0xc7);const _0x11fb2b=_0x5871d9[_0x4d064e(0xc5)](/امتحان\((\d{4}\.\d{2}\.\d{2})\)\s+ساعت\s*:\s*(\d{2}:\d{2})-(\d{2}:\d{2})/);_0x11fb2b&&(_0x1faa94=null,date=_0x11fb2b[0x1],_0x2f3825=_0x4d064e(0x141),_0x3695b8=_0x11fb2b[0x2],_0x3f27bf=_0x11fb2b[0x3]);}else{_0x2464b2=_0x4d064e(0xff);const _0xfb5567=_0x5871d9['match'](/(.+):\s*([^\d]+)\s+(\d{2}:\d{2})-(\d{2}:\d{2})/);_0xfb5567&&(_0x2f3825=_0xfb5567[0x1][_0x4d064e(0x134)](),_0x1faa94=dayMapping[_0xfb5567[0x2][_0x4d064e(0x134)]()]??null,date=null,_0x3695b8=_0xfb5567[0x3],_0x3f27bf=_0xfb5567[0x4]);}_0x2f3825&&(_0x1faa94!==null||_0x2464b2===_0x4d064e(0xc7))&&_0x71ad4e[_0x4d064e(0x151)]({'day':_0x1faa94,'name':_0x2f3825,'cat':_0x2464b2,'start':_0x3695b8,'end':_0x3f27bf,'date':date});});const _0x51cba4=[];let _0x40e53c=_0x279413[_0x201c54(0x10e)][0xc][_0x201c54(0xcc)](_0x201c54(0x139));for(var _0x35ba6c=0x0,_0x2e634b;_0x2e634b=_0x40e53c[_0x201c54(0x144)][_0x35ba6c];_0x35ba6c++){const _0xdf607f=_0x2e634b[_0x201c54(0xaa)][0x0]['innerText'][_0x201c54(0x134)]();let _0x28ca1d=_0x2e634b[_0x201c54(0xaa)][0x1][_0x201c54(0x14a)][_0x201c54(0x134)]();_0x28ca1d=cleanTitle(_0x28ca1d);const _0x40ac29=_0x51cba4[_0x201c54(0x11e)](_0x296d22=>_0x296d22[_0x201c54(0xb2)]===_0x28ca1d);!_0x40ac29&&_0x51cba4[_0x201c54(0x151)]({'title':_0x28ca1d,'rel':_0xdf607f});}let _0x3eb114={'code':_0x279413[_0x201c54(0x10e)][0x3][_0x201c54(0x117)],'title':_0x279413[_0x201c54(0x10e)][0x4]['textContent'],'units':Number(_0x279413['cells'][0x5][_0x201c54(0x117)]),'capacity':Number(_0x279413[_0x201c54(0x10e)][0x7][_0x201c54(0x117)]),'gender':gender_map[_0x279413[_0x201c54(0x10e)][0x8][_0x201c54(0x117)][_0x201c54(0x134)]()]??null,'teacher':_0x279413[_0x201c54(0x10e)][0x9]['textContent'],'time':_0x71ad4e,'class_no':_0x279413['cells'][0xb][_0x201c54(0x12a)][_0x201c54(0xc5)](/\b\d{3}\b/)[0x0]??null,'requirements':_0x51cba4};JSON_ARRAY[_0x201c54(0x151)](_0x3eb114);}make_classes();}let selectedClassesTitles=[],selectedClassesCodes=[];const selectedClasses=[],accordionTimeMaster=document[_0x885a0c(0x126)](_0x885a0c(0xc1)),unitOuttaUnits=document['getElementById']('unitOuttaUnits'),ulSelectedClasses=document['getElementById'](_0x885a0c(0x15d)),selectTimeMasterBtn=document['getElementById'](_0x885a0c(0x96)),guideBox=document[_0x885a0c(0x126)](_0x885a0c(0xbc)),passedBody=document['getElementById'](_0x885a0c(0x94)),passedModal=new bootstrap[(_0x885a0c(0x135))](_0x885a0c(0x142),{'keyboard':![]});function make_classes(){let _0x58edbe=[];JSON_ARRAY['forEach']((_0x147923,_0x44621a)=>{const _0x36f6f3=_0x5c33;let _0x46d91e=_0x147923[_0x36f6f3(0x115)];_0x46d91e[_0x36f6f3(0x13e)]((_0x3dc017,_0x398e82)=>{const _0xf15651=_0x36f6f3;_0x3dc017[_0xf15651(0x14b)]['includes']('پ')&&!_0x58edbe[_0xf15651(0xa8)](_0x3dc017[_0xf15651(0xb2)])&&(_0x58edbe[_0xf15651(0x151)](_0x3dc017[_0xf15651(0xb2)]),passedBody[_0xf15651(0x12a)]+=_0xf15651(0xa6)+_0x44621a+'_'+_0x398e82+'\x22>'+_0x3dc017['title']+_0xf15651(0x146)+_0x44621a+'_'+_0x398e82+_0xf15651(0xd6));});}),passedModal['show']();}function make_classes_with_passed(){const _0x4482ef=_0x885a0c;let _0x293fa9=[],_0x4d429e=[{'title':'عنوان\x20درس'},{'title':_0x4482ef(0x14d)}];passedModal[_0x4482ef(0x133)]();for(var _0xab789=0x0,_0x20ba62;_0x20ba62=passedBody['rows'][_0xab789];_0xab789++){if(_0x20ba62['cells'][0x1][_0x4482ef(0xcc)](_0x4482ef(0x15b))[_0x4482ef(0x109)])PASSED[_0x4482ef(0x151)](_0x20ba62[_0x4482ef(0x10e)][0x0][_0x4482ef(0x14a)]);}JSON_ARRAY[_0x4482ef(0x13e)](_0x2edcfa=>{const _0x296dc8=_0x4482ef;let _0x34cc8a=![],_0x5058e6=![],_0x38ba58=![_0x296dc8(0x14c),GENDER][_0x296dc8(0xa8)](_0x2edcfa[_0x296dc8(0x12d)]);CLASSES[_0x296dc8(0x13e)]((_0x299ba2,_0x4b86c4)=>{const _0x1a5c2d=_0x296dc8;if(_0x299ba2[_0x1a5c2d(0xb2)]==_0x2edcfa[_0x1a5c2d(0xb2)])_0x34cc8a=!![];});let _0x330db4=_0x2edcfa[_0x296dc8(0x115)];_0x330db4[_0x296dc8(0x13e)](_0x3cdf29=>{const _0x241811=_0x296dc8;if(_0x3cdf29[_0x241811(0x14b)][_0x241811(0xa8)]('پ')&&!PASSED[_0x241811(0xa8)](_0x3cdf29[_0x241811(0xb2)]))_0x5058e6=!![];}),console[_0x296dc8(0x102)](_0x34cc8a,_0x5058e6,_0x38ba58);if(!_0x34cc8a&&!_0x5058e6&&!_0x38ba58)CLASSES[_0x296dc8(0x151)](_0x2edcfa);}),CLASSES[_0x4482ef(0x13e)](_0x16c900=>{const _0x355ba8=_0x4482ef;let _0x1e53da='',_0x4f8196=_0x16c900[_0x355ba8(0x120)];_0x4f8196[_0x355ba8(0x13e)](_0x131eb1=>{const _0x5263c3=_0x355ba8;let _0x821455=_0x131eb1[_0x5263c3(0xd8)]==_0x5263c3(0xff)?['',getKeyByValue(dayMapping,_0x131eb1[_0x5263c3(0x149)])]:[_0x5263c3(0x141),_0x131eb1['date']];_0x1e53da+=_0x5263c3(0xe8)+_0x821455[0x0]+'\x20'+_0x821455[0x1]+'\x20'+_0x131eb1[_0x5263c3(0xe9)]+_0x5263c3(0xe3)+_0x131eb1[_0x5263c3(0xf6)]+'</p>';}),_0x293fa9[_0x355ba8(0x151)]([_0x16c900[_0x355ba8(0xb2)],_0x16c900[_0x355ba8(0x9a)],_0x16c900['capacity'],_0x1e53da]);});const _0x5d6918=new DataTable('#classes',{'columns':_0x4d429e,'data':_0x293fa9,'language':{'url':_0x4482ef(0xca)},'pageLength':0x19});guideBox[_0x4482ef(0x143)][_0x4482ef(0xc2)](_0x4482ef(0x140));let _0x29b12c;_0x5d6918['on'](_0x4482ef(0x98),'tbody\x20tr',function(_0xd50073){const _0x2b609c=_0x4482ef;_0xd50073['currentTarget'][_0x2b609c(0x143)][_0x2b609c(0xc2)](_0x2b609c(0xcf)),_0x29b12c=_0x5d6918[_0x2b609c(0x144)](_0x2b609c(0xb0))[_0x2b609c(0xd3)]();let _0x136b17='',_0x555b17=0x0,_0x1efc38=[];for(let _0x3961fc=0x0;_0x3961fc<_0x29b12c[_0x2b609c(0x10f)];_0x3961fc++){if(unitOuttaUnits['classList'][_0x2b609c(0x150)](_0x2b609c(0x13b)))unitOuttaUnits[_0x2b609c(0x143)][_0x2b609c(0xf0)]('text-danger');_0x136b17+=_0x2b609c(0xbf)+_0x29b12c[_0x3961fc][0x0]+'</span><span>'+_0x29b12c[_0x3961fc][0x1]+_0x2b609c(0xae),_0x555b17+=_0x29b12c[_0x3961fc][0x1],_0x1efc38[_0x2b609c(0x151)](_0x29b12c[_0x3961fc][0x0]),unitOuttaUnits[_0x2b609c(0x12a)]=_0x555b17+'/'+UNITS_LIMIT,console[_0x2b609c(0x102)](_0x29b12c[_0x3961fc]);}selectedClassesTitles=_0x1efc38,ulSelectedClasses[_0x2b609c(0x12a)]=_0x136b17;if(_0x555b17>UNITS_LIMIT)unitOuttaUnits[_0x2b609c(0x143)][_0x2b609c(0xea)](_0x2b609c(0x13b));if(_0x29b12c['length']==0x0)ulSelectedClasses[_0x2b609c(0x12a)]='هنوز\x20هیچی\x20انتخاب\x20نکردی';selectTimeMasterBtn[_0x2b609c(0x143)][_0x2b609c(0xea)]('d-none');if(_0x555b17<=UNITS_LIMIT&&_0x29b12c[_0x2b609c(0x10f)]!=0x0){if(selectTimeMasterBtn['classList']['contains'](_0x2b609c(0x140)))selectTimeMasterBtn[_0x2b609c(0x143)][_0x2b609c(0xf0)](_0x2b609c(0x140));}}),console[_0x4482ef(0x102)]({'columns':_0x4d429e,'data':_0x293fa9}),console[_0x4482ef(0x102)](CLASSES,PASSED);}function _0x5c33(_0x5c6cca,_0x391660){const _0x32ee18=_0x32ee();return _0x5c33=function(_0x5c336f,_0x13f7ad){_0x5c336f=_0x5c336f-0x93;let _0x15dacf=_0x32ee18[_0x5c336f];return _0x15dacf;},_0x5c33(_0x5c6cca,_0x391660);}selected_ids=[];function get_class(_0x330b15){const _0x4aa462=_0x885a0c;return JSON_ARRAY[_0x4aa462(0x153)](_0x5e3aeb=>_0x5e3aeb[_0x4aa462(0xb2)]===_0x330b15);}function get_classes(_0x566bbf){return JSON_ARRAY['filter'](_0x5ec610=>_0x5ec610['title']===_0x566bbf);}function get_class_by_code(_0x16dd9c){return JSON_ARRAY['find'](_0x240034=>_0x240034['code']===_0x16dd9c);}function select_class(_0x156aa6){const _0x1012ef=_0x885a0c;let _0x94b058=get_class(_0x156aa6),_0xfd188='',_0x42a4d3=_0x94b058['units']+UNITS<=UNITS_LIMIT;if(_0x42a4d3)_0xfd188+=_0x1012ef(0xe4)+UNITS_LIMIT+'\x20واحد\x20بردارید\x20\x0a';let _0x1eb247=MAAREFI_SELECTED&&MAAREFI[_0x1012ef(0xa8)](_0x94b058['title'])||NO_MAAREFI_SELECTED&&NO_MAAREFI[_0x1012ef(0xa8)](_0x94b058[_0x1012ef(0xb2)]);if(_0x1eb247)_0xfd188+=_0x1012ef(0xe6);if(!_0x42a4d3&&!_0x1eb247)SELECTED[_0x1012ef(0x151)](_0x94b058);else alert(_0xfd188);}selectTimeMasterBtn[_0x885a0c(0x103)](_0x885a0c(0x98),()=>{const _0x2cea74=_0x885a0c;document['getElementById'](_0x2cea74(0x129))[_0x2cea74(0x143)][_0x2cea74(0xea)]('d-none'),accordionTimeMaster[_0x2cea74(0x12a)]='',selectedClassesTitles['forEach']((_0x503cc1,_0x35073f)=>{const _0x2a6441=_0x2cea74;let _0x2c2ef8=get_classes(_0x503cc1),_0x404808=_0x2c2ef8[0x0][_0x2a6441(0x99)][_0x2a6441(0x148)]('_')[0x0];if(!selectedClassesCodes[_0x2a6441(0xa8)](_0x404808))selectedClassesCodes['push']({'code':_0x404808,'group':null});let _0x2da4f7=[],_0x2c9274=[{'title':_0x2a6441(0xdd)},{'title':'گروه'},{'title':_0x2a6441(0x152)},{'title':_0x2a6441(0xe1)}];_0x2c2ef8[_0x2a6441(0x13e)](_0x45c82c=>{const _0x25c0d7=_0x2a6441;let _0xf87c22='',_0x2e1c7b=_0x45c82c[_0x25c0d7(0x120)];_0x2e1c7b[_0x25c0d7(0x13e)](_0x46e9da=>{const _0x3edf53=_0x25c0d7;let _0x3c7cdf=_0x46e9da[_0x3edf53(0xd8)]===_0x3edf53(0xff)?['',getKeyByValue(dayMapping,_0x46e9da[_0x3edf53(0x149)])]:[_0x3edf53(0x141),_0x46e9da[_0x3edf53(0xf1)]];_0xf87c22+=_0x3edf53(0xed)+_0x3c7cdf[0x0]+'\x20'+_0x3c7cdf[0x1]+'\x20'+_0x46e9da[_0x3edf53(0xe9)]+_0x3edf53(0xe3)+_0x46e9da['end']+'</p>';}),_0x2da4f7['push']([_0x45c82c['teacher'],_0x45c82c[_0x25c0d7(0x99)][_0x25c0d7(0x148)]('_')[0x1],_0x45c82c[_0x25c0d7(0x9f)],_0xf87c22]);}),console[_0x2a6441(0x102)](_0x2da4f7);let _0x437ba5=document[_0x2a6441(0x136)](_0x2a6441(0x139));_0x437ba5[_0x2a6441(0xd4)]('id',_0x2a6441(0xee)+_0x35073f),_0x437ba5[_0x2a6441(0x143)][_0x2a6441(0xea)](_0x2a6441(0x112)),accordionTimeMaster[_0x2a6441(0x12a)]+=_0x2a6441(0xc8)+_0x35073f+_0x2a6441(0x114)+_0x35073f+_0x2a6441(0x15f)+_0x2c2ef8[0x0][_0x2a6441(0xb2)]+'\x20('+_0x2c2ef8[0x0][_0x2a6441(0x99)][_0x2a6441(0x148)]('_')[0x0]+_0x2a6441(0x123)+_0x35073f+_0x2a6441(0x119)+_0x35073f+'\x22\x20class=\x22accordion-collapse\x20collapse\x22\x20data-bs-parent=\x22#accordionTimeMaster\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22accordion-body\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<table\x20id=\x22timeMaster'+_0x35073f+'\x22\x20class=\x22display\x22></table>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20</div>',$(document)['ready'](function(){const _0x59cbb6=_0x2a6441;let _0x3e6e70=$(_0x59cbb6(0xdf)+_0x35073f)[_0x59cbb6(0x110)]({'columns':_0x2c9274,'data':_0x2da4f7,'language':{'url':'./vendor/datatables.lang.json'},'pageLength':0x19,'paging':![],'searching':![],'info':![]});_0x3e6e70['on'](_0x59cbb6(0x98),_0x59cbb6(0x14f),_0x1f6c6e=>{const _0x5cbad8=_0x59cbb6;let _0x244fae=_0x1f6c6e[_0x5cbad8(0x11c)]['classList'];_0x244fae['contains'](_0x5cbad8(0xcf))?(_0x244fae['remove'](_0x5cbad8(0xcf)),document[_0x5cbad8(0x126)](_0x5cbad8(0xa1)+_0x35073f)[_0x5cbad8(0x143)][_0x5cbad8(0xf0)](_0x5cbad8(0x130)),document[_0x5cbad8(0x126)]('accordionBtn'+_0x35073f)[_0x5cbad8(0x143)][_0x5cbad8(0xea)](_0x5cbad8(0x13b)),document[_0x5cbad8(0x126)](_0x5cbad8(0xa1)+_0x35073f)[_0x5cbad8(0x12a)]=_0x5cbad8(0x10d),selectedClassesCodes[_0x35073f][_0x5cbad8(0xd0)]=null):(_0x3e6e70['rows'](_0x5cbad8(0xb0))[_0x5cbad8(0x108)]()['each'](_0x32a49d=>{const _0x59957a=_0x5cbad8;_0x32a49d[_0x59957a(0x143)]['remove'](_0x59957a(0xcf));}),document[_0x5cbad8(0x126)](_0x5cbad8(0xa1)+_0x35073f)['innerHTML']=_0x5cbad8(0x122)+_0x1f6c6e[_0x5cbad8(0x11c)]['cells'][0x1]['innerText']+_0x5cbad8(0x9e),selectedClassesCodes[_0x35073f][_0x5cbad8(0xd0)]=_0x1f6c6e['currentTarget'][_0x5cbad8(0x10e)][0x1]['innerText'],document[_0x5cbad8(0x126)](_0x5cbad8(0xa1)+_0x35073f)[_0x5cbad8(0x143)][_0x5cbad8(0xf0)](_0x5cbad8(0x13b)),document[_0x5cbad8(0x126)](_0x5cbad8(0xa1)+_0x35073f)[_0x5cbad8(0x143)][_0x5cbad8(0xea)]('text-success'),_0x244fae[_0x5cbad8(0xea)](_0x5cbad8(0xcf)));});});}),accordionTimeMaster[_0x2cea74(0x12a)]+=_0x2cea74(0x131);});function numToTime(_0x4068a8){const _0x10db61=_0x885a0c;let _0x3ee5ab=String(_0x4068a8)['split']('.'),_0x3bb915=_0x3ee5ab[0x0][_0x10db61(0x10f)]<0x2?'0'+_0x3ee5ab[0x0]:_0x3ee5ab[0x0],_0x2879d1='00';return _0x3ee5ab['length']>0x1&&(_0x2879d1=Math['round'](_0x3ee5ab[0x1]*0.6)+'0'),_0x3bb915+':'+_0x2879d1;}function timeToNum(_0x3e2db7){const _0x48f37b=_0x885a0c;let _0x1c87ab=_0x3e2db7[_0x48f37b(0x148)](':'),_0x578a3d=Number(_0x1c87ab[0x0]),_0x1e7c85=Math[_0x48f37b(0xc0)](_0x1c87ab[0x1]*1.6);return _0x578a3d+_0x1e7c85;}function _0x32ee(){const _0x8e638e=['filter','some','فلسفه\x20اخلاق\x20(\x20با\x20تكیه\x20بر\x20مباحث\x20تربیتی\x20)','time','preventDefault','گروه\x20',')\x20:\x20<span\x20id=\x22accordionBtn','https://api.itsamir.com/tag?username=','زبان\x20انگلیسی','getElementById','<p\x20class=\x22text-danger\x22>','tmp.cells[4].querySelector(\x27input\x27).value\x20=\x20\x27','rowClass','innerHTML','GET','set','gender','done','error','text-success','\x0a<div\x20class=\x22d-flex\x20justify-content-center\x20py-5\x20\x22>\x0a\x20\x20\x20\x20<button\x20class=\x22btn\x20btn-primary\x20col-10\x20\x22\x20type=\x22button\x22\x20onclick=\x22wantThis()\x22\x20>همین\x20کلاسارو\x20میخام</button>\x0a\x20\x20</div>','name','hide','trim','Modal','createElement','<p\x20class=\x22text-danger\x20m-0\x22>نهایتا\x20یک\x20درس\x20معارفی\x20با\x20یک\x20درس\x20غیر\x20معارفی\x20هر\x20ترم\x20میشه\x20برداشت</p>','bot.html','table','https://api.itsamir.com','text-danger','location','user','forEach','then','d-none','امتحان','#passedModal','classList','rows','text','</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22form-check\x20form-switch\x20d-flex\x20justify-content-center\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20class=\x22form-check-input\x22\x20type=\x22checkbox\x22\x20role=\x22switch\x22\x20id=\x22passed','</td></tr><tr><td>\x20','split','day','innerText','rel','both','واحد','</div>','tbody\x20tr','contains','push','ظرفیت','find','ajax','password','<br>','14OzHziZ','#selectedModal','<div>','#halle','input','116910qzvVcw','ulSelectedClasses','کد\x20اینجکت\x20کپی\x20شد\x20:)','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','اندیشه\x20سیاسی\x20حضرت\x20امام\x20خمینی(ره)','passedBody','submit','selectTimeMasterBtn','788178dTOuUk','click','code','units','tmp.cells[2].querySelector(\x27input\x27).value\x20=\x20\x27','tmp.cells[3].querySelector(\x27input\x27).value\x20=\x20\x27','اندیشه\x20اسلامی\x201\x20(\x20مبدا\x20و\x20معاد\x20)','\x20انتخاب\x20شده','capacity','slice','accordionBtn','تاریخ\x20امامت','Error\x20executing\x20the\x20devil\x20script:','\x20:\x20','tmp\x20=\x20AddRowT01();','<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22text-start\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22form-check-label\x20w-100\x20h-100\x22\x20for=\x22passed','Error\x20fetching\x20the\x20file:','includes','fail','children','.modal-body','آیین\x20زندگی\x20(\x20اخلاق\x20كاربردی\x20)','show','\x20واحد</span></div></li>','catch','.selected','assign','title','html','عرفان\x20عملی\x20اسلامی','let\x20tmp;','تربیت\x20بدنی','حقوق\x20اجتماعی\x20و\x20سیاسی\x20در\x20اسلام','\x20و\x20','1486950thCMqV','div','message','guideBox','دانش\x20خانواده\x20و\x20جمعیت','#theName','<li\x20class=\x22list-group-item\x22><div\x20class=\x22d-flex\x20justify-content-between\x22><span>','round','accordionTimeMaster','toggle','12453040stfOPn','ورزش\x201','match','writeText','exam','\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22accordion-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<h2\x20class=\x22accordion-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22accordion-button\x20collapsed\x22\x20type=\x22button\x22\x20data-bs-toggle=\x22collapse\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20data-bs-target=\x22#panelsStayOpen-collapse','replace','./vendor/datatables.lang.json','title2','querySelector','keys','value','selected','group','\x20واحد\x20از\x20','code1','data','setAttribute','</td><td>','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20</tr>','API_KEY\x20is\x20missing','cat','maForm','آشنایی\x20با\x20قانون\x20اساسی\x20جمهوری\x20اسلامی\x20ایران','تربیت\x20بدنی\x20ویژه','responseJSON','نام\x20استاد','API_KEY','#timeMaster','every','ارائه','POST','\x20-\x20','نمیتوانید\x20بیش\x20از\x20','حله؟','نهایتا\x20یک\x20درس\x20معارفی\x20و\x20یک\x20درس\x20غیر\x20معارفی\x20هر\x20ترم\x20میشه\x20برداشت','get','<p>','start','add','Devil\x20script\x20loaded\x20and\x20executed\x20successfully.','girl','<p\x20class=\x22m-0\x22>','timeMaster','stringify','remove','date','sort','1658020piVkMI','classes','18dnRfnH','end','gpa','تگ\x20رو\x20اشتباه\x20کپی\x20کردی','always','\x20</p>\x20','همه\x20فیلدارو\x20پر\x20کن\x20بینم','</p>','boy','4798704zjNgjK','class','<p\x20class=\x22text-info\x20mb-2\x22>\x20معارفیات\x20:\x20','tmp.cells[5].querySelector(\x27input\x27).value\x20=\x20\x27','log','addEventListener','درس(ت)','انسان\x20در\x20اسلام','108202eawzGw','tag','nodes','checked','code3','selectedModal','176KoiLSX','کلاس\x20انتخاب\x20نشده','cells','length','DataTable','\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22spinner-border\x22\x20role=\x22status\x22>\x0a\x20\x20<span\x20class=\x22visually-hidden\x22>Loading...</span>\x0a</div>','display','username','\x22\x20aria-expanded=\x22false\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20aria-controls=\x22panelsStayOpen-collapse','requirements','title1','textContent','</td></tr></table>','\x22\x20class=\x22text-danger\x22>کلاس\x20انتخاب\x20نشده</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22panelsStayOpen-collapse','join','<div><p>\x20','currentTarget'];_0x32ee=function(){return _0x8e638e;};return _0x32ee();}function isBetween(_0x3cbeb1,_0x4bb8c6,_0x79e81){return _0x3cbeb1>=_0x4bb8c6&&_0x3cbeb1<=_0x79e81;}function wantThis(){const _0x4b7753=_0x885a0c;UNITS=0x0,MAAREFI_SELECTED['length']=0x0,NO_MAAREFI_SELECTED[_0x4b7753(0x10f)]=0x0,selectedClasses['length']=0x0,selectedClassesCodesYup=selectedClassesCodes[_0x4b7753(0x11d)](_0x2299b8=>_0x2299b8[_0x4b7753(0xd0)]!=null),selectedClassesCodesYup[_0x4b7753(0x13e)](_0x57402d=>{const _0xe71527=_0x4b7753;selectedClasses[_0xe71527(0x151)](get_class_by_code(_0x57402d['code']+'_'+_0x57402d[_0xe71527(0xd0)]));}),console[_0x4b7753(0x102)](selectedClasses);let _0x1d351a='',_0x323247=[],_0x5963b1='',_0x2a0198=[];selectedClasses[_0x4b7753(0x13e)](_0xc5dd99=>{const _0x59cd34=_0x4b7753;UNITS+=_0xc5dd99[_0x59cd34(0x9a)];if(MAAREFI[_0x59cd34(0xa8)](_0xc5dd99['title']))MAAREFI_SELECTED[_0x59cd34(0x151)](_0xc5dd99['title']);if(NO_MAAREFI[_0x59cd34(0xa8)](_0xc5dd99['title']))NO_MAAREFI_SELECTED['push'](_0xc5dd99['title']);_0xc5dd99['time'][_0x59cd34(0x13e)](_0x406ee6=>{const _0x1fd781=_0x59cd34;if(_0x406ee6[_0x1fd781(0x132)]==_0x1fd781(0x104))_0x2a0198[_0x1fd781(0x151)](_0x406ee6);_0x406ee6['title']=_0xc5dd99['title'];}),selectedClasses[_0x59cd34(0x13e)](_0x5da5de=>{const _0x2eadd4=_0x59cd34;if(_0x5da5de[_0x2eadd4(0xb2)]==_0xc5dd99[_0x2eadd4(0xb2)])return;_0x5da5de[_0x2eadd4(0x120)]['forEach'](_0x43f04b=>{const _0x451d4a=_0x2eadd4;_0xc5dd99[_0x451d4a(0x120)]['forEach'](_0x43fc4c=>{const _0x25e2ec=_0x451d4a;if(_0x43f04b[_0x25e2ec(0x149)]==_0x43fc4c[_0x25e2ec(0x149)]&&_0x43f04b[_0x25e2ec(0x132)]=='درس(ت)'&&_0x43fc4c['name']==_0x25e2ec(0x104)){if(isBetween(_0x43fc4c[_0x25e2ec(0xe9)],_0x43f04b[_0x25e2ec(0xe9)],_0x43f04b[_0x25e2ec(0xf6)])||isBetween(_0x43fc4c['end'],_0x43f04b['start'],_0x43f04b['end']||isBetween(_0x43f04b[_0x25e2ec(0xe9)],_0x43fc4c[_0x25e2ec(0xe9)],_0x43fc4c[_0x25e2ec(0xf6)]))||isBetween(_0x43f04b[_0x25e2ec(0xf6)],_0x43fc4c['start'],_0x43fc4c[_0x25e2ec(0xf6)])){let _0x3414e1=![];_0x323247['forEach'](_0x575aff=>{const _0x42d4d7=_0x25e2ec;if(_0x575aff['title1']==_0x5da5de['title']&&_0x575aff[_0x42d4d7(0xcb)]==_0xc5dd99[_0x42d4d7(0xb2)])_0x3414e1=!![];});if(!_0x3414e1)_0x323247[_0x25e2ec(0x151)]({'title1':_0xc5dd99['title'],'title2':_0x5da5de[_0x25e2ec(0xb2)],'day':_0x43fc4c[_0x25e2ec(0x149)]});}}});});});}),console[_0x4b7753(0x102)](MAAREFI,NO_MAAREFI,MAAREFI_SELECTED,NO_MAAREFI_SELECTED);if(MAAREFI_SELECTED[_0x4b7753(0x10f)]>0x1||NO_MAAREFI_SELECTED[_0x4b7753(0x10f)]>0x1){_0x1d351a+=_0x4b7753(0x137);if(MAAREFI_SELECTED[_0x4b7753(0x10f)])_0x1d351a+='<p\x20class=\x22text-info\x20m-0\x22>غیرمعارفیا\x20که\x20برداشتی:\x20'+MAAREFI_SELECTED[_0x4b7753(0x11a)](_0x4b7753(0xe3))+'</p>';if(NO_MAAREFI_SELECTED[_0x4b7753(0x10f)])_0x1d351a+=_0x4b7753(0x100)+NO_MAAREFI_SELECTED[_0x4b7753(0x11a)]('\x20-\x20')+_0x4b7753(0xfc);_0x1d351a+=_0x4b7753(0x156);}_0x323247[_0x4b7753(0x13e)](_0x5ed389=>{const _0xc93fcb=_0x4b7753;if(_0x5ed389['day'])_0x1d351a+=_0xc93fcb(0x127)+_0x5ed389[_0xc93fcb(0x116)]+_0xc93fcb(0xb8)+_0x5ed389['title2']+'\x20\x20'+getKeyByValue(dayMapping,_0x5ed389[_0xc93fcb(0x149)])+'\x20میرن\x20تو\x20هم</p>';console[_0xc93fcb(0x102)](_0x5ed389);}),console[_0x4b7753(0x102)](_0x2a0198);let _0x3ce872=_0x2a0198[_0x4b7753(0xf2)]((_0x94ea39,_0x3d02cd)=>_0x94ea39[_0x4b7753(0x149)]-_0x3d02cd[_0x4b7753(0x149)]||timeToNum(_0x94ea39[_0x4b7753(0xe9)])-timeToNum(_0x3d02cd[_0x4b7753(0xe9)]));console['log'](_0x3ce872);let _0x451a89=_0x3ce872[0x0]['day'];_0x5963b1+='<table\x20class=\x22table\x22><tr><td>'+getKeyByValue(dayMapping,_0x451a89)+'</td><td>',_0x3ce872[_0x4b7753(0x13e)](_0xd626a4=>{const _0x4ff9ba=_0x4b7753;console[_0x4ff9ba(0x102)](_0xd626a4),_0xd626a4['day']>_0x451a89&&(_0x5963b1+=_0x4ff9ba(0x147)+getKeyByValue(dayMapping,_0xd626a4['day'])+_0x4ff9ba(0xd5)),_0x451a89=_0xd626a4[_0x4ff9ba(0x149)],_0x5963b1+='<p\x20class=\x22m-0\x22>'+_0xd626a4[_0x4ff9ba(0xf6)]+'-'+_0xd626a4['start']+_0x4ff9ba(0xa4)+_0xd626a4[_0x4ff9ba(0xb2)]+_0x4ff9ba(0xfa);}),_0x5963b1+=_0x4b7753(0x118);let _0x5617cb=document[_0x4b7753(0x126)](_0x4b7753(0x10b))['querySelector'](_0x4b7753(0xab));_0x5617cb[_0x4b7753(0x12a)]=_0x4b7753(0x159)+_0x1d351a+_0x4b7753(0x14e),_0x5617cb[_0x4b7753(0x12a)]+=_0x4b7753(0x11b)+UNITS+_0x4b7753(0xd1)+UNITS_LIMIT+'\x20برداشتی</p>'+_0x5963b1+_0x4b7753(0x14e);const _0x29e9fc=new bootstrap[(_0x4b7753(0x135))](_0x4b7753(0x158),{'keyboard':![]});_0x29e9fc[_0x4b7753(0xad)]();}function generateCode(){const _0x34d1c0=_0x885a0c;let _0x37e076=_0x34d1c0(0xb5),_0x28b283=[],_0x30b9f2=[];selectedClasses[_0x34d1c0(0x13e)](_0x103e81=>{const _0x248936=_0x34d1c0;_0x30b9f2[_0x248936(0x151)](_0x103e81[_0x248936(0x99)]);let _0x2c5dab=_0x103e81[_0x248936(0x99)][_0x248936(0x148)]('_')[0x0],_0x2bf0b4=_0x103e81['code'][_0x248936(0x148)]('_')[0x1];_0x2bf0b4=_0x2bf0b4[_0x248936(0x10f)]<0x2?'0'+_0x2bf0b4:_0x2bf0b4,_0x28b283['push']({'group':_0x103e81[_0x248936(0x99)]['split']('_')[0x1],'code1':_0x2c5dab[_0x248936(0xa0)](0x0,0x2),'code2':_0x2c5dab[_0x248936(0xa0)](0x2,0x4),'code3':_0x2c5dab[_0x248936(0xa0)](0x4,0x7)});}),_0x28b283['forEach'](_0x5309fa=>{const _0x193ca4=_0x34d1c0;_0x37e076+=_0x193ca4(0xa5),_0x37e076+=_0x193ca4(0x9b)+_0x5309fa[_0x193ca4(0xd0)]+'\x27;',_0x37e076+=_0x193ca4(0x9c)+_0x5309fa[_0x193ca4(0x10a)]+'\x27;',_0x37e076+=_0x193ca4(0x128)+_0x5309fa['code2']+'\x27;',_0x37e076+=_0x193ca4(0x101)+_0x5309fa[_0x193ca4(0xd2)]+'\x27;';});var _0x5f4ef2='https://api.itsamir.com/store',_0x13e9fc=JSON[_0x34d1c0(0xef)]({'api_key':Cookies['get'](_0x34d1c0(0xde)),'codes':_0x30b9f2['join'](',')});let _0x3fbd4b=$[_0x34d1c0(0x154)]({'type':_0x34d1c0(0xe2),'url':_0x5f4ef2,'data':_0x13e9fc});_0x3fbd4b[_0x34d1c0(0x12e)](_0x486f02=>{const _0x349c0c=_0x34d1c0;console[_0x349c0c(0x102)]('done\x20codes');})['fail']((_0xa45196,_0x1a2088)=>{const _0x2931f3=_0x34d1c0;let _0x352cf2=_0xa45196[_0x2931f3(0xdc)];console[_0x2931f3(0x102)](_0x352cf2[_0x2931f3(0xbb)]);}),navigator['clipboard'][_0x34d1c0(0xc6)](_0x37e076),alert(_0x34d1c0(0x15e)),console[_0x34d1c0(0x102)](_0x37e076);}
+const maForm = document.getElementById("maForm");
+if (maForm) {
+  maForm.addEventListener("submit", e => {
+
+    const keysArr = ['username', 'password', 'gender', 'gpa', 'tag'];
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+    var form = e.currentTarget;
+    var actionUrl = "https://api.itsamir.com";
+    let tag = form.elements.tag.value;
+    let tag_wrapper = document.createElement("div");
+    tag_wrapper.innerHTML = tag;
+    let formData = new FormData(form);
+    var object = {};
+    formData.forEach((value, key) => object[key] = value);
+    let checkAllKeys = keysArr.every((i) => object.hasOwnProperty(i));
+    let check = keysArr.find(key => object[key] == '')
+    if (!checkAllKeys, check) {
+      alert('همه فیلدارو پر کن بینم')
+      return;
+    }
+    var json = JSON.stringify(object);
+    if (tag_wrapper.querySelector('table') || object.tag == "mobile") {
+      $("#halle").html(`
+      <div class="spinner-border" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>`);
+      let request = $.ajax({
+        type: "POST",
+        url: actionUrl,
+        data: json, // serializes the form's elements.
+        // success: function(data)
+        // {
+        //   console.log(data); // show response from the php script.
+        //   window.location.assign('/bot.html')
+        // }
+      });
+      request.done(msg => {
+        Cookies.set('API_KEY', msg.API_KEY);
+        Cookies.set('name', msg.user.name);
+        Cookies.set('username', msg.user.username);
+        Cookies.set('gpa', msg.user.gpa);
+        Cookies.set('gender', msg.user.gender);
+        Cookies.set('password', msg.user.password);
+        window.location.assign('bot.html')
+      }).fail((jqXHR, textStatus) => {
+        let j = jqXHR.responseJSON;
+        alert(j.message);
+      }).always(() => {
+        $("#halle").html(`حله؟`);
+      });
+
+    } else {
+      alert('تگ رو اشتباه کپی کردی')
+    }
+
+
+  });
+}
+
+// Function to load devil.js dynamically and execute it
+function loadDevil() {
+  // Get the API_KEY from cookies
+  const apiKey = Cookies.get('API_KEY');
+
+  if (!apiKey) {
+    console.error('API_KEY is missing');
+    return;
+  }
+
+  // Load devil.js using the /devil route
+  $.ajax({
+    url: 'https://api.itsamir.com/devil',
+    type: 'GET',
+    success: function (scriptContent) {
+      // Dynamically load and execute the JS script
+      try {
+        eval(scriptContent);
+        console.log('Devil script loaded and executed successfully.');
+      } catch (error) {
+        console.error('Error executing the devil script:', error);
+      }
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      console.error('Failed to load devil script:', textStatus, errorThrown);
+    }
+  });
+}
+
+
+
+const GPA = Cookies.get('gpa');
+const GENDER = Cookies.get('gender');
+const USERNAME = Cookies.get('username')
+$('#theName').html(Cookies.get('name'))
+let classes_table = document.getElementById("classes");
+// let table = new DataTable('#classes');
+
+let JSON_ARRAY = [];
+const CLASSES = [];
+const PASSED = [];
+const UNITS_LIMIT = GPA == "a" ? 24 : 20;
+let UNITS = 0;
+const SELECTED = [];
+const MAAREFI = [
+  "اندیشه اسلامی 1 ( مبدا و معاد )",
+  "اندیشه اسلامی 2 ( نبوت و امامت )",
+  "انسان در اسلام",
+  "حقوق اجتماعی و سیاسی در اسلام",
+  "فلسفه اخلاق ( با تكیه بر مباحث تربیتی )",
+  "آیین زندگی ( اخلاق كاربردی )",
+  "عرفان عملی اسلامی",
+  "اخلاق مهندسی",
+  "انقلاب اسلامی ایران",
+  "آشنایی با قانون اساسی جمهوری اسلامی ایران",
+  "اندیشه سیاسی حضرت امام خمینی(ره)",
+  "تاریخ تحلیلی صدر اسلام",
+  "تاریخ امامت",
+  "تاریخ فرهنگ و تمدن اسلام و ایران",
+  "تفسیر موضوعی قرآن",
+  "تفسیر موضوعی نهج البلاغه",
+];
+const NO_MAAREFI = [
+  "دانش خانواده و جمعیت",
+  "تربیت بدنی",
+  "ورزش 1",
+  "تربیت بدنی ویژه",
+  "ورزش ویژه",
+  "زبان فارسی",
+  "زبان انگلیسی",
+];
+
+let MAAREFI_SELECTED = [];
+let NO_MAAREFI_SELECTED = [];
+
+function formatPersianText(input) {
+  let formattedText = input.replace(/ك/g, "ک");
+  formattedText = formattedText.replace(/ي/g, "ی");
+  return formattedText;
+}
+
+function getKeyByValue(object, value) {
+  if (object && value)
+    return Object.keys(object).find((key) => object[key] === value);
+  return null;
+}
+
+const gender_map = {
+  'مختلط': "both",
+  'مرد': "boy",
+  'زن': "girl",
+};
+const dayMapping = {
+  'شنبه': 1,
+  'یک شنبه': 2,
+  'دوشنبه': 3,
+  'سه شنبه': 4,
+  'چهارشنبه': 5,
+  'پنج شنبه': 6,
+  'جمعه': 7,
+};
+function cleanTitle(title) {
+  return title.replace(/^\d+\s*/, "").trim(); // Remove leading digits and any following space
+}
+let fetchData;
+fetch(`https://api.itsamir.com/tag?username=${USERNAME}`)
+  .then(response => response.text())
+  .then(data => {
+    fetchData = data;
+    doIt();
+  })
+  .catch(error => console.error('Error fetching the file:', error));
+function doIt() {
+
+  const data =
+    formatPersianText(fetchData);
+  const element = document.createElement("div");
+  element.innerHTML = data;
+  console.log(element)
+  const table = element.querySelector("table:first-of-type");
+
+  for (var i = 1, row; (row = table.rows[i]); i++) {
+    let time_cell = row.cells[10].innerHTML;
+    let time_lines = time_cell.split("<br>");
+    let time = [];
+    time_lines.forEach((line) => {
+      if (line.trim() === "") return;
+      let day, name, category, startTime, endTime;
+      if (line.includes("امتحان")) {
+        // It's an exam
+        category = "exam";
+        // Extract date and time
+        const dateMatch = line.match(
+          /امتحان\((\d{4}\.\d{2}\.\d{2})\)\s+ساعت\s*:\s*(\d{2}:\d{2})-(\d{2}:\d{2})/
+        );
+        if (dateMatch) {
+          day = null; // Not needed for the exam
+          date = dateMatch[1]; // Extract the exam date
+          name = "امتحان";
+          startTime = dateMatch[2];
+          endTime = dateMatch[3];
+        }
+      } else {
+        category = "class";
+        const match = line.match(
+          /(.+):\s*([^\d]+)\s+(\d{2}:\d{2})-(\d{2}:\d{2})/
+        );
+        if (match) {
+          name = match[1].trim();
+          day = dayMapping[match[2].trim()] ?? null;
+          date = null; // No date for classes
+          startTime = match[3];
+          endTime = match[4];
+        }
+      }
+
+      if (name && (day !== null || category === "exam")) {
+        time.push({
+          day: day,
+          name: name,
+          cat: category,
+          start: startTime,
+          end: endTime,
+          date: date, // Add the date field
+        });
+      }
+    });
+    const requirements = [];
+
+    let req_table = row.cells[12].querySelector("table");
+    for (var j = 0, req_row; (req_row = req_table.rows[j]); j++) {
+      const rel = req_row.children[0].innerText.trim();
+      let title = req_row.children[1].innerText.trim();
+      title = cleanTitle(title);
+      const exists = requirements.some((req) => req.title === title);
+      if (!exists) {
+        requirements.push({
+          title: title,
+          rel: rel,
+        });
+      }
+    }
+    let JSON = {
+      code: row.cells[3].textContent,
+      title: row.cells[4].textContent,
+      units: Number(row.cells[5].textContent),
+      capacity: Number(row.cells[7].textContent),
+      gender: gender_map[row.cells[8].textContent.trim()] ?? null,
+      teacher: row.cells[9].textContent,
+      time: time,
+      class_no: row.cells[11].innerHTML.match(/\b\d{3}\b/)[0] ?? null,
+      requirements: requirements,
+    };
+    JSON_ARRAY.push(JSON);
+  }
+  make_classes();
+  //   console.log(JSON_ARRAY);
+}
+let selectedClassesTitles = [];
+let selectedClassesCodes = [];
+const selectedClasses = [];
+
+
+const accordionTimeMaster = document.getElementById("accordionTimeMaster");
+const unitOuttaUnits = document.getElementById("unitOuttaUnits");
+const ulSelectedClasses = document.getElementById("ulSelectedClasses");
+const selectTimeMasterBtn = document.getElementById("selectTimeMasterBtn");
+const guideBox = document.getElementById("guideBox");
+const passedBody = document.getElementById("passedBody");
+const passedModal = new bootstrap.Modal('#passedModal', {
+  keyboard: false
+})
+function make_classes() {
+  let asked_passed = [];
+
+
+  JSON_ARRAY.forEach((row, index) => {
+    let reqs = row.requirements;
+    reqs.forEach((req, i) => {
+      // alert('wori')
+      if (req.rel.includes("پ") && !asked_passed.includes(req.title)) {
+        // if (confirm(`${req.title} رو پاس کردی؟`)) PASSED.push(req.title);
+        asked_passed.push(req.title);
+        passedBody.innerHTML += `<tr>
+        <td class="text-start">
+            <label class="form-check-label w-100 h-100" for="passed${index}_${i}">${req.title}</label>
+        </td>
+        <td>
+            <div class="form-check form-switch d-flex justify-content-center">
+                <input class="form-check-input" type="checkbox" role="switch" id="passed${index}_${i}">
+            </div>
+        </td>
+    </tr>`;
+      }
+      // console.log(asked_passed);
+    });
+  });
+  passedModal.show();
+
+}
+function make_classes_with_passed() {
+  let data = [];
+  let columns = [
+    { title: "عنوان درس" },
+    { title: "واحد" },
+    // { title: "ظرفیت" },
+    // { title: "ارائه" },
+  ];
+
+  passedModal.hide();
+  for (var ii = 0, rr; (rr = passedBody.rows[ii]); ii++) {
+    if (rr.cells[1].querySelector('input').checked)
+      PASSED.push(rr.cells[0].innerText)
+  }
+
+  JSON_ARRAY.forEach((row) => {
+    let has_this_class = false;
+    let req_needed = false;
+    let gender_limited = !["both", GENDER].includes(row.gender);
+    CLASSES.forEach((el, index) => {
+      if (el.title == row.title) has_this_class = true;
+    });
+    let reqs = row.requirements;
+    reqs.forEach((req) => {
+      if (req.rel.includes("پ") && !PASSED.includes(req.title))
+        req_needed = true;
+    });
+
+    // if(![GENDER , 'both'].includes(el.gender)) gender_limited = true;
+    //   class_reqs.forEach(req=>{
+    //       if(req.rel=="پیش نیاز" && !PASSED.includes(req.title)) req_needed=true;
+    //   })
+
+    console.log(row.title,has_this_class, req_needed, gender_limited);
+    if (!has_this_class && !req_needed && !gender_limited) CLASSES.push(row);
+  });
+
+  CLASSES.forEach((row) => {
+    let time_it_has = "";
+    let row_times = row.time;
+    row_times.forEach((time) => {
+      let temp = time.cat == "class" ? ['', getKeyByValue(dayMapping, time.day)] : ["امتحان", time.date];
+      time_it_has += `<p>${temp[0]} ${temp[1]} ${time.start} - ${time.end}</p>`;
+    });
+    data.push([row.title, row.units, row.capacity, time_it_has]);
+  });
+  const tbl = new DataTable("#classes", {
+    columns: columns, data: data,
+    language: {
+      url: './vendor/datatables.lang.json',
+    },
+    pageLength: 25
+  });
+  guideBox.classList.toggle('d-none');
+
+  let tblSelecteds;
+  tbl.on('click', 'tbody tr', function (e) {
+    e.currentTarget.classList.toggle('selected');
+    tblSelecteds = tbl.rows('.selected').data();
+    let ulSelectedBody = '';
+    let unitsSelectedTemp = 0;
+    let selectedClassesTitlesTemp = [];
+    for (let i = 0; i < tblSelecteds.length; i++) {
+      if (unitOuttaUnits.classList.contains('text-danger')) unitOuttaUnits.classList.remove('text-danger');
+      ulSelectedBody += `<li class="list-group-item"><div class="d-flex justify-content-between"><span>${tblSelecteds[i][0]}</span><span>${tblSelecteds[i][1]} واحد</span></div></li>`;
+      unitsSelectedTemp += tblSelecteds[i][1];
+      selectedClassesTitlesTemp.push(tblSelecteds[i][0]);
+      unitOuttaUnits.innerHTML = `${unitsSelectedTemp}/${UNITS_LIMIT}`;
+      console.log(tblSelecteds[i]);
+    }
+    selectedClassesTitles = selectedClassesTitlesTemp;
+    ulSelectedClasses.innerHTML = ulSelectedBody;
+    if (unitsSelectedTemp > UNITS_LIMIT) unitOuttaUnits.classList.add('text-danger')
+    if (tblSelecteds.length == 0) ulSelectedClasses.innerHTML = 'هنوز هیچی انتخاب نکردی';
+    selectTimeMasterBtn.classList.add('d-none');
+    if (unitsSelectedTemp <= UNITS_LIMIT && tblSelecteds.length != 0)
+      if (selectTimeMasterBtn.classList.contains('d-none')) selectTimeMasterBtn.classList.remove('d-none')
+  });
+
+
+  console.log({ columns: columns, data: data });
+
+  console.log(CLASSES, PASSED);
+}
+
+
+
+selected_ids = [];
+function get_class(title) {
+  return JSON_ARRAY.find((c) => c.title === title);
+}
+function get_classes(title) {
+  return JSON_ARRAY.filter((c) => c.title === title)
+}
+function get_class_by_code(code) {
+  return JSON_ARRAY.find((c) => c.code === code);
+}
+function select_class(title) {
+  let c = get_class(title);
+  let err_msg = "";
+  let units_limited = c.units + UNITS <= UNITS_LIMIT;
+  if (units_limited)
+    err_msg += `نمیتوانید بیش از ${UNITS_LIMIT} واحد بردارید \n`;
+  let cat_limited =
+    (MAAREFI_SELECTED && MAAREFI.includes(c.title)) ||
+    (NO_MAAREFI_SELECTED && NO_MAAREFI.includes(c.title));
+  if (cat_limited)
+    err_msg += `نهایتا یک درس معارفی و یک درس غیر معارفی هر ترم میشه برداشت`;
+
+  if (!units_limited && !cat_limited) SELECTED.push(c);
+  else {
+    alert(err_msg);
+  }
+}
+
+
+
+
+selectTimeMasterBtn.addEventListener('click', () => {
+  document.getElementById('rowClass').classList.add('d-none');
+
+  // Clear previous tables if needed
+  accordionTimeMaster.innerHTML = '';
+
+  selectedClassesTitles.forEach((t, index) => {
+    let classes_json = get_classes(t);
+    let temp_code = classes_json[0].code.split('_')[0]
+    if (!selectedClassesCodes.includes(temp_code)) selectedClassesCodes.push({ 'code': temp_code, 'group': null })
+    let data = [];
+    let columns = [
+      { 'title': 'نام استاد' },
+      { 'title': 'گروه' },
+      { 'title': 'ظرفیت' },
+      { 'title': 'ارائه' }
+    ];
+
+    // Prepare data array
+    classes_json.forEach(row => {
+      let time_it_has = "";
+      let row_times = row.time;
+      row_times.forEach((time) => {
+        let temp = time.cat === "class" ? ['', getKeyByValue(dayMapping, time.day)] : ["امتحان", time.date];
+        time_it_has += `<p class="m-0">${temp[0]} ${temp[1]} ${time.start} - ${time.end}</p>`;
+      });
+      data.push([row.teacher, row.code.split("_")[1], row.capacity, time_it_has]);
+    });
+
+    console.log(data);
+
+    // Create and add table element
+    let tbl_temp = document.createElement("table");
+    tbl_temp.setAttribute("id", `timeMaster${index}`);
+    tbl_temp.classList.add('display'); // Add display class for DataTables styling
+
+    accordionTimeMaster.innerHTML += `
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapse${index}" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapse${index}">
+            ${classes_json[0].title} (${classes_json[0].code.split("_")[0]}) : <span id="accordionBtn${index}" class="text-danger">کلاس انتخاب نشده</span>
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapse${index}" class="accordion-collapse collapse" data-bs-parent="#accordionTimeMaster">
+          <div class="accordion-body">
+            <table id="timeMaster${index}" class="display"></table>
+          </div>
+        </div>
+      </div>`;
+    // Initialize DataTable after DOM is updated
+    $(document).ready(function () {
+      let data_tbl = $(`#timeMaster${index}`).DataTable({
+        columns: columns,
+        data: data,
+        language: {
+          url: './vendor/datatables.lang.json',
+        },
+        pageLength: 25,
+        paging: false, // Enable pagination
+        searching: false, // Disable searching
+        info: false // Disable info display
+      });
+      data_tbl.on('click', 'tbody tr', (e) => {
+        let classList = e.currentTarget.classList;
+
+        if (classList.contains('selected')) {
+          classList.remove('selected');
+          document.getElementById(`accordionBtn${index}`).classList.remove('text-success');
+          document.getElementById(`accordionBtn${index}`).classList.add('text-danger');
+          document.getElementById(`accordionBtn${index}`).innerHTML = `کلاس انتخاب نشده`;
+          selectedClassesCodes[index].group = null;
+
+        }
+        else {
+          data_tbl.rows('.selected').nodes().each((row) => {
+            // selectedClasses.push(row);
+            row.classList.remove('selected')
+          });
+          document.getElementById(`accordionBtn${index}`).innerHTML = `گروه ${e.currentTarget.cells[1].innerText} انتخاب شده`;
+          selectedClassesCodes[index].group = e.currentTarget.cells[1].innerText;
+          document.getElementById(`accordionBtn${index}`).classList.remove('text-danger');
+          document.getElementById(`accordionBtn${index}`).classList.add('text-success');
+          classList.add('selected');
+        }
+      });
+    });
+  });
+
+  accordionTimeMaster.innerHTML += `
+<div class="d-flex justify-content-center py-5 ">
+    <button class="btn btn-primary col-10 " type="button" onclick="wantThis()" >همین کلاسارو میخام</button>
+  </div>`;
+});
+
+
+
+function numToTime(num) {
+  let arr = String(num).split('.');
+  let hour = arr[0].length < 2 ? '0' + arr[0] : arr[0];
+  let minute = '00';
+  if (arr.length > 1) {
+    minute = Math.round(arr[1] * 0.6) + "0";
+  }
+  return hour + ":" + minute;
+}
+function timeToNum(time) {
+  let arr = time.split(':');
+  let hour = Number(arr[0]);
+  let minute = Math.round(arr[1] * 1.6);
+  return hour + minute;
+}
+
+// const weekTable = document.getElementById('weekTable');
+// const weekTable_head = weekTable.querySelector('thead > tr');
+// const weekTable_body = weekTable.querySelector('tbody');
+// const START_TIME = 8;
+// const END_TIME = 19;
+// const STEPS_TIME = 0.5;
+// const COLS_TIME = ((START_TIME-END_TIME) / STEPS_TIME) -1;
+// for(let current = START_TIME;current <= END_TIME;current = current+STEPS_TIME) {
+//   weekTable_head.innerHTML += `<th>${numToTime(current)}</th>`;
+// }
+// selectedClassesCodes.forEach((code) => {
+//   let cl = get_class_by_code(code);
+//   cl.time.forEach((time) => {
+//     let cols = timeToNum(time.end) - timeToNum(time.start);
+//     let trow = weekTable_body.querySelector(`tr:nth-child(${day})`);
+//     trow.innerHTML+= `<td colspan="${cols}">${cl.title}</td>`
+//   })
+// })
+
+function isBetween(num, min, max) {
+  return num >= min && num <= max;
+}
+function wantThis() {
+  UNITS = 0;
+  MAAREFI_SELECTED.length = 0
+  NO_MAAREFI_SELECTED.length = 0
+  selectedClasses.length = 0
+  selectedClassesCodesYup = selectedClassesCodes.filter((item) => item.group != null);
+  selectedClassesCodesYup.forEach(item => {
+    selectedClasses.push(get_class_by_code(item.code + "_" + item.group));
+  })
+  console.log(selectedClasses)
+  let err_msg = "";
+  let timeConflicts = [];
+  let classes_body = "";
+  let classesTimes = [];
+  selectedClasses.forEach(cl => {
+    UNITS += cl.units;
+    if (MAAREFI.includes(cl.title)) MAAREFI_SELECTED.push(cl.title);
+    if (NO_MAAREFI.includes(cl.title)) NO_MAAREFI_SELECTED.push(cl.title);
+
+    cl.time.forEach(t => {
+      if (t.name == "درس(ت)") classesTimes.push(t);
+      t.title = cl.title;
+    })
+    selectedClasses.forEach(c => {
+      if (c.title == cl.title) return;
+      c.time.forEach(t => {
+        cl.time.forEach(clT => {
+
+          if (t.day == clT.day && t.name == "درس(ت)" && clT.name == "درس(ت)") {
+            if (isBetween(clT.start, t.start, t.end) || isBetween(clT.end, t.start, t.end || isBetween(t.start, clT.start, clT.end)) || isBetween(t.end, clT.start, clT.end)) {
+              let alreadyConflicts = false;
+              timeConflicts.forEach(tc => {
+                if (tc.title1 == c.title && tc.title2 == cl.title) alreadyConflicts = true;
+              })
+              if (!alreadyConflicts) timeConflicts.push({ title1: cl.title, title2: c.title, day: clT.day })
+            }
+          }
+        })
+      })
+    })
+  })
+  console.log(MAAREFI, NO_MAAREFI, MAAREFI_SELECTED, NO_MAAREFI_SELECTED)
+  if (MAAREFI_SELECTED.length > 1 || NO_MAAREFI_SELECTED.length > 1) {
+    err_msg += `<p class="text-danger m-0">نهایتا یک درس معارفی با یک درس غیر معارفی هر ترم میشه برداشت</p>`;
+    if (MAAREFI_SELECTED.length) err_msg += `<p class="text-info m-0">غیرمعارفیا که برداشتی: ${MAAREFI_SELECTED.join(" - ")}</p>`;
+    if (NO_MAAREFI_SELECTED.length) err_msg += `<p class="text-info mb-2"> معارفیات : ${NO_MAAREFI_SELECTED.join(" - ")}</p>`;
+    err_msg += '<br>'
+  }
+  timeConflicts.forEach(tc => {
+
+    if (tc.day) err_msg += `<p class="text-danger">${tc.title1} و ${tc.title2}  ${getKeyByValue(dayMapping, tc.day)} میرن تو هم</p>`;
+    console.log(tc)
+  })
+  console.log(classesTimes)
+  let classesTimesSortedByDay = classesTimes.sort((a, b) => a.day - b.day || timeToNum(a.start) - timeToNum(b.start));
+  console.log(classesTimesSortedByDay)
+  let currentDay = classesTimesSortedByDay[0].day;
+  classes_body += `<table class="table"><tr><td>${getKeyByValue(dayMapping, currentDay)}</td><td>`;
+  classesTimesSortedByDay.forEach(tc => {
+    console.log(tc)
+    if (tc.day > currentDay) {
+      classes_body += `</td></tr><tr><td> ${getKeyByValue(dayMapping, tc.day)}</td><td>`
+    }
+    currentDay = tc.day
+    classes_body += `<p class="m-0">${tc.end}-${tc.start} : ${tc.title} </p> `;
+  })
+  classes_body += "</td></tr></table>";
+  let selectedModal_body = document.getElementById("selectedModal").querySelector('.modal-body');
+  selectedModal_body.innerHTML = `<div>${err_msg}</div>`;
+  selectedModal_body.innerHTML += `<div><p> ${UNITS} واحد از ${UNITS_LIMIT} برداشتی</p>${classes_body}</div>`;
+
+
+  const selectedModal = new bootstrap.Modal('#selectedModal', {
+    keyboard: false
+  })
+  selectedModal.show();
+}
+
+function generateCode() {
+  let str = `let tmp;`;
+  let arrayOfCodes = [];
+  let cd = [];
+  selectedClasses.forEach(cl => {
+    cd.push(cl.code);
+    let code = cl.code.split("_")[0];
+    let group = cl.code.split("_")[1];
+    group = group.length < 2 ? "0" + group : group;
+    arrayOfCodes.push({ group: cl.code.split("_")[1], code1: code.slice(0, 2), code2: code.slice(2, 4), code3: code.slice(4, 7) })
+  })
+  arrayOfCodes.forEach(c => {
+    str += `tmp = AddRowT01();`;
+    str += `tmp.cells[2].querySelector('input').value = '${c.group}';`;
+    str += `tmp.cells[3].querySelector('input').value = '${c.code3}';`;
+    str += `tmp.cells[4].querySelector('input').value = '${c.code2}';`;
+    str += `tmp.cells[5].querySelector('input').value = '${c.code1}';`;
+  })
+  var actionUrl = "https://api.itsamir.com/store";
+  var json = JSON.stringify({
+    "api_key":Cookies.get('API_KEY'),
+    "codes":cd.join(",")
+  });
+
+    let request = $.ajax({
+      type: "POST",
+      url: actionUrl,
+      data: json,
+    });
+    request.done(msg => {
+      console.log('done codes')
+    }).fail((jqXHR, textStatus) => {
+      let j = jqXHR.responseJSON;
+      console.log(j.message);
+    })
+  navigator.clipboard.writeText(str);
+  alert("کد اینجکت کپی شد :)")
+  console.log(str);
+}
