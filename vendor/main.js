@@ -20,7 +20,7 @@ if (maForm) {
       return;
     }
     var json = JSON.stringify(object);
-    if (tag_wrapper.querySelector('table') || object.tag == "mobile") {
+    if (tag_wrapper.querySelector('table') || json.tag == "mobile") {
       $("#halle").html(`
       <div class="spinner-border" role="status">
   <span class="visually-hidden">Loading...</span>
@@ -40,7 +40,6 @@ if (maForm) {
         Cookies.set('name', msg.user.name);
         Cookies.set('username', msg.user.username);
         Cookies.set('gpa', msg.user.gpa);
-        Cookies.set('gender', msg.user.gpa);
         Cookies.set('password', msg.user.password);
         window.location.assign('bot.html')
       }).fail((jqXHR, textStatus) => {
@@ -98,7 +97,6 @@ let classes_table = document.getElementById("classes");
 
 let JSON_ARRAY = [];
 const CLASSES = [];
-const CLASSES_ALL = [];
 const PASSED = [];
 const UNITS_LIMIT = GPA == "a" ? 24 : 20;
 let UNITS = 0;
@@ -241,6 +239,8 @@ function doIt() {
         });
       }
     }
+    let temp_no = row.cells[11].innerHTML.includes("مجازی") ? "online" : row.cells[11].innerHTML.match(/\b\d{3}\b/)[0];
+
     let JSON = {
       code: row.cells[3].textContent,
       title: row.cells[4].textContent,
@@ -249,7 +249,7 @@ function doIt() {
       gender: gender_map[row.cells[8].textContent.trim()] ?? null,
       teacher: row.cells[9].textContent,
       time: time,
-      class_no: row.cells[11].innerHTML.match(/\b\d{3}\b/)[0] ?? null,
+      class_no: temp_no ?? null,
       requirements: requirements,
     };
     JSON_ARRAY.push(JSON);
@@ -332,9 +332,8 @@ function make_classes_with_passed() {
     //       if(req.rel=="پیش نیاز" && !PASSED.includes(req.title)) req_needed=true;
     //   })
 
-    console.log(row.title,has_this_class, req_needed, gender_limited);
+    console.log(has_this_class, req_needed, gender_limited);
     if (!has_this_class && !req_needed && !gender_limited) CLASSES.push(row);
-    if (!req_needed && !gender_limited) CLASSES_ALL.push(row);
   });
 
   CLASSES.forEach((row) => {
@@ -389,13 +388,13 @@ function make_classes_with_passed() {
 
 selected_ids = [];
 function get_class(title) {
-  return CLASSES_ALL.find((c) => c.title === title);
+  return JSON_ARRAY.find((c) => c.title === title);
 }
 function get_classes(title) {
-  return CLASSES_ALL.filter((c) => c.title === title)
+  return JSON_ARRAY.filter((c) => c.title === title)
 }
 function get_class_by_code(code) {
-  return CLASSES_ALL.find((c) => c.code === code);
+  return JSON_ARRAY.find((c) => c.code === code);
 }
 function select_class(title) {
   let c = get_class(title);
@@ -671,4 +670,3 @@ function generateCode() {
   alert("کد اینجکت کپی شد :)")
   console.log(str);
 }
-
