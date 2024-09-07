@@ -20,7 +20,7 @@ if (maForm) {
       return;
     }
     var json = JSON.stringify(object);
-    if (tag_wrapper.querySelector('table') || json.tag == "mobile") {
+    if (tag_wrapper.querySelector('table') || object.tag == "mobile") {
       $("#halle").html(`
       <div class="spinner-border" role="status">
   <span class="visually-hidden">Loading...</span>
