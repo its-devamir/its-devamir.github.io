@@ -4,13 +4,10 @@
 <head>
     <title>Popup Extension</title>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' blob: https://apis.google.com;">
-
     <link rel="stylesheet" href="./vendor/bootstrap.min.css">
     <link rel="stylesheet" href="./vendor/datatable.bootstrap5.min.css">
     <link rel="stylesheet" href="./vendor/datatable.min.css">
     <link rel="stylesheet" href="./vendor/style.css">
-    <script src="https://apis.google.com/js/api.js"></script>    
     <script>
         if(!document.cookie.includes('API_KEY') && !document.cookie.includes('Name'))
         {
@@ -105,7 +102,6 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
           <button type="button" class="btn btn-primary" onclick="generateCode()">آره خودشه</button>
-          <button type="button" class="btn btn-success" id="calendarBtn">Google Calendar</button>
         </div>
       </div>
     </div>
@@ -144,7 +140,6 @@
 
     <script src="./vendor/bootstrap.bundle.min.js"></script>
     <script src="./vendor/jquery.min.js"></script>
-  <script src="./vendor/jalaali.min.js"></script>
     <script src="./vendor/datatable.min.js"></script>
     <script src="./vendor/js.cookie.min.js"></script>
     <script src="./vendor/main.js"></script>
