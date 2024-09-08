@@ -20,7 +20,7 @@ if (maForm) {
       return;
     }
     var json = JSON.stringify(object);
-    if (tag_wrapper.querySelector('table') || json.tag == "mobile") {
+    if (tag_wrapper.querySelector('table') || object.tag == "mobile") {
       $("#halle").html(`
       <div class="spinner-border" role="status">
   <span class="visually-hidden">Loading...</span>
@@ -227,19 +227,29 @@ function doIt() {
     const requirements = [];
 
     let req_table = row.cells[12].querySelector("table");
-    for (var j = 0, req_row; (req_row = req_table.rows[j]); j++) {
-      const rel = req_row.children[0].innerText.trim();
-      let title = req_row.children[1].innerText.trim();
-      title = cleanTitle(title);
-      const exists = requirements.some((req) => req.title === title);
-      if (!exists) {
-        requirements.push({
-          title: title,
-          rel: rel,
-        });
+    if (req_table) {  // Check if req_table exists
+      for (var j = 0, req_row; (req_row = req_table.rows[j]); j++) {
+        const rel = req_row.children[0].innerText.trim();
+        let title = req_row.children[1].innerText.trim();
+        title = cleanTitle(title);
+        const exists = requirements.some((req) => req.title === title);
+        if (!exists) {
+          requirements.push({
+            title: title,
+            rel: rel,
+          });
+        }
       }
+    } else {
+      // Continue to the next iteration if there's no table
+      continue;
     }
-    let temp_no = row.cells[11].innerHTML.includes("مجازی") ? "online" : row.cells[11].innerHTML.match(/\b\d{3}\b/)[0];
+    console.log(row.cells[11].innerHTML, row.cells[4].textContent)
+    let temp_no;
+    if(row.cells[11].innerHTML == '')
+      temp_no = "ندارد"
+    else
+      temp_no = row.cells[11].innerHTML.includes("مجازی") ? "online" : row.cells[11].innerHTML.match(/\b\d{3}\b/)[0];
 
     let JSON = {
       code: row.cells[3].textContent,
