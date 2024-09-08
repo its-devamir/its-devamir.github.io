@@ -586,7 +586,7 @@ function wantThis() {
     if (NO_MAAREFI.includes(cl.title)) NO_MAAREFI_SELECTED.push(cl.title);
 
     cl.time.forEach(t => {
-      if (t.name == "درس(ت)") classesTimes.push(t);
+      if (t.name == "درس(ت)" || t.name == "حل تمرین(ت)") classesTimes.push(t);
       t.title = cl.title;
     })
     selectedClasses.forEach(c => {
@@ -594,7 +594,7 @@ function wantThis() {
       c.time.forEach(t => {
         cl.time.forEach(clT => {
 
-          if (t.day == clT.day && t.name == "درس(ت)" && clT.name == "درس(ت)") {
+          if (t.day == clT.day && (t.name == "درس(ت)" || t.name == "حل تمرین(ت)") && (clT.name == "درس(ت)" || clT.name == "حل تمرین(ت)") ) {
             if (isBetween(clT.start, t.start, t.end) || isBetween(clT.end, t.start, t.end || isBetween(t.start, clT.start, clT.end)) || isBetween(t.end, clT.start, clT.end)) {
               let alreadyConflicts = false;
               timeConflicts.forEach(tc => {
