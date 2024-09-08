@@ -562,7 +562,7 @@ function timeToNum(time) {
 // })
 
 function isBetween(num, min, max) {
-  return num >= min && num <= max;
+  return num > min && num < max;
 }
 function wantThis() {
   UNITS = 0;
