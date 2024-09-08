@@ -242,10 +242,7 @@ function doIt() {
           });
         }
       }
-    } else {
-      // Continue to the next iteration if there's no table
-      continue;
-    }
+    } 
     console.log(row.cells[11].innerHTML, row.cells[4].textContent)
     let temp_no;
     if(row.cells[11].innerHTML == '')
@@ -586,7 +583,7 @@ function wantThis() {
     if (NO_MAAREFI.includes(cl.title)) NO_MAAREFI_SELECTED.push(cl.title);
 
     cl.time.forEach(t => {
-      if (t.name == "درس(ت)" || t.name == "حل تمرین(ت)") classesTimes.push(t);
+      if (t.name.includes("درس") || t.name.includes("تمرین")) classesTimes.push(t);
       t.title = cl.title;
     })
     selectedClasses.forEach(c => {
@@ -594,7 +591,7 @@ function wantThis() {
       c.time.forEach(t => {
         cl.time.forEach(clT => {
 
-          if (t.day == clT.day && (t.name == "درس(ت)" || t.name == "حل تمرین(ت)") && (clT.name == "درس(ت)" || clT.name == "حل تمرین(ت)") ) {
+          if (t.day == clT.day && (t.name.includes("درس") || t.name.includes("تمرین")) && (clT.name.includes("درس") || clT.name.includes("تمرین")) ) {
             if (isBetween(clT.start, t.start, t.end) || isBetween(clT.end, t.start, t.end || isBetween(t.start, clT.start, clT.end)) || isBetween(t.end, clT.start, clT.end)) {
               let alreadyConflicts = false;
               timeConflicts.forEach(tc => {
