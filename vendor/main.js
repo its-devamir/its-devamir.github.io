@@ -41,6 +41,7 @@ if (maForm) {
         Cookies.set('username', msg.user.username);
         Cookies.set('gpa', msg.user.gpa);
         Cookies.set('password', msg.user.password);
+        Cookies.set('gender', msg.user.gender);
         window.location.assign('bot.html')
       }).fail((jqXHR, textStatus) => {
         let j = jqXHR.responseJSON;
