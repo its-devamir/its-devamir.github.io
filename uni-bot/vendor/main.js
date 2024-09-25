@@ -36,6 +36,7 @@ if (maForm) {
         // }
       });
       request.done(msg => {
+        msg = JSON.PARSE(msg);
         Cookies.set('API_KEY', msg.API_KEY);
         Cookies.set('name', msg.user.name);
         Cookies.set('username', msg.user.username);
